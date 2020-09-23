@@ -1,0 +1,82 @@
+.results
+  // margin-bottom s2x
+  padding s2x 0
+  position relative
+
+  &-wrap
+    background clr-bg--d
+    position relative
+    &:before
+      content ''
+      background-image url('../img/content/3-results/divider.png')
+      background-size cover
+      transform: scale(-1, 1)
+      display block
+      object-fit: cover;
+      position absolute
+      top -100px
+      width 99vw
+      height 100px
+    &:after
+      display block
+      content ''
+      background-color red
+      background-image url('../img/content/3-results/divider.png')
+      background-size cover
+      background-position 50% 100%
+      transform: scale(-1, -1)
+      position absolute
+      left 0
+      top -100px
+      z-index 0
+      width 100vw
+      height 100px
+
+  &-list
+    display flex
+    justify-content space-between
+    padding-top s2
+  &-item
+    position relative
+    max-width 202px
+    text-align center
+    padding (s2 + s1) s1 s1 s1
+    border 10px solid
+    border-radius 12px
+    &__icon
+      size(120px)
+      position absolute
+      left 0
+      right 0
+      top -65px
+      bottom 0
+      margin 0 auto
+
+    &:nth-child(1)
+      border-color clr-cl
+      .results-item__icon
+        background url('../img/content/3-results/cl.png')
+    &:nth-child(2)
+      border-color clr-vk
+      .results-item__icon
+        background url('../img/content/3-results/vk.png')
+    &:nth-child(3)
+      border-color clr-ig
+      .results-item__icon
+        background url('../img/content/3-results/ig.png')
+    &:nth-child(4)
+      border-color clr-tg
+      .results-item__icon
+        background url('../img/content/3-results/tg.png')
+    &:nth-child(5)
+      border-color clr-mn
+      .results-item__icon
+        background url('../img/content/3-results/mn.png')
+      padding-left 5px
+      padding-right 5px
+
+
+    &__number
+      margin-bottom s1
+      font-size 32px
+      font-weight 900

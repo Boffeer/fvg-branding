@@ -1,0 +1,64 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
+
+
+// services
+mixin bullet(img, text, section, bg, time)
+	li.services-item__bullet(data-aos="fade-up" data-aos-duration=time)
+		img(src="static/img/content/4-services/"+img+".png", alt="text").services-item__bullet-icon
+		p.services-item__bullet-text= text
+		img.services-item__bullet-bg(src="static/img/content/4-services/"+section+"/bg/"+bg+".png", alt="bg")
+
+mixin serviceInfo(title, subtitle, text, f)
+	.services-item-info(data-aos="fade-"+f data-aos-duration='500')
+		h3.services-item__title= title
+		h4.services-item__subitile= subtitle
+		p.services-item__text= text
+		button.btn.services-item__btn Узнать стоимость
+
+
+//cases
+// mixin caseItem(caseNumber, title, budget, result, long, text)
+mixin caseItem(caseNumber, title, ...results)
+	- var count = 1
+	li.cases-item
+		h3.cases-item__title= title
+		ul.cases-item__stats
+			each result in results
+				li.cases-item__stat(class="cases-item__stat--"+count++)= result
+			// li.cases-item__stat Бюджет
+			// 	span= budget
+			// li.cases-item__stat Результат
+			// 	span= result
+			// li.cases-item__stat Срок
+			// 	span= long
+		p.cases-item__text= text
+		button.btn.cases-item__btn(class="case-item__btn--"+caseNumber) Подробнее
+
+
+// work
+mixin workItem(icon, text)
+	.work-slider-item
+		img(src="static/img/content/7-how/"+icon+".png").work-item__img
+		p.work-item__text= text
+
+// reviews
+mixin review(name, occupate, text)
+	.reviews-slider-item
+		.reviews-top
+			img(src="https://picsum.photos/200/300").reviews-photo
+			.reviews-who
+				h3.reviews-name= name
+				p.reviews-occupate= occupate
+		p.review= text
+
+// socials
+mixin socials()
+	.socials
+		a(href="#").socials__link.socials__link-ig
+		a(href="#").socials__link.socials__link-vk
+		a(href="#").socials__link.socials__link-fb
+		a(href="#").socials__link.socials__link-tg
+		a(href="#").socials__link.socials__link-wa

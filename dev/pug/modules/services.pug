@@ -1,0 +1,120 @@
+section.services-wrap
+	.services-modal_wrap
+		form.services-modal
+			button(type="button").modal_close-btn ×
+			h3.services-modal_title Узнайте стоимость
+				span.services-modal_service-name
+			input.services-modal_input.g-input(
+				name="name",
+				type="text"
+				placeholder="Имя",
+				required
+				)
+			input.services-modal_input.g-input(
+				name="tel",
+				type="tel"
+				placeholder="Телефон",
+				required
+				)
+			button.services-modal_submit.btn Узнать стоимость
+	.services
+		h2.section-title(data-shadow="Наши услуги") Наши услуги
+		ul.services-list
+			li.services-item.services--smm
+				.container.services-container
+					.services-item-info(data-aos="fade-right" data-aos-duration='500')
+						h3.services-item__title Social Media Marketing
+						h4.services-item__subitile Комплексное продвижение в VK, Facebook, Instagram, Одноклассники, Telegram, YouTube
+						p.services-item__text Мы используем все доступные инструменты для получения клиентов и создания бренда через социальные сети
+						button.btn.services-item__btn Узнать стоимость
+					ul.services-item-bullets
+						+bullet('1/target', 'Таргетированная реклама', '1', '1','500')
+						+bullet('1/design', 'Продающий дизайн', '1', '2', '700')
+						+bullet('1/video', 'Промо ролики', '1', '3', '900')
+						+bullet('1/bot', 'Чат-боты', '1', '4', '1100')
+
+						+bullet('1/funnel', 'Автоворонки', '1', '5','1200')
+						+bullet('1/game', 'Геймификация', '1', '6', '1300')
+						+bullet('1/fire', 'Рекламы у лидеров мнений', '1', '7', '1400')
+
+						+bullet('1/adv', 'Реклама в наших интернет-сообществах', '1', '8', '1800')
+
+			li.services-item.services--web
+				.container.services-container
+					+serviceInfo('Website', 'Разработка и развитие сайтов различного формата', 'Мы разрабатываем сайты под ключ с нуля с любым бюджетом, используя навыки профессионального дизайнера, копирайтера, программиста и верстальщика. Что позволит получить клиентоориентированный сайт с продающим дизайном, быстрой загрузкой, удобной навигацией и простым управлением', 'left')
+					ul.services-item-bullets
+						+bullet('2/catalog', 'Сайт-каталог', '2', '1', '500')
+						+bullet('2/visit', ' Сайт - визитка', '2', '2', '700')
+						+bullet('2/ecommerce', 'Интернет магазин', '2', '3', '900')
+
+						+bullet('2/adv', 'Промо сайт', '2', '4', '1000')
+						+bullet('2/landing', 'Одностраничник', '2', '5', '1100')
+						+bullet('2/corp', 'Корпоративный сайт', '2', '6', '1200')
+
+			li.services-item.services--design
+				.container.services-container
+					+serviceInfo(
+					'Design',
+					'Полный спектр услуг от дизайнеров',
+					'Нужен продающий дизайн постов в Instagram, буклетов, баннеров; запоминающийся логотип, фирменный стиль компании, личная визитка? Наши дизайнеры с удовольствием сделают то, что действительно вы хотите', 'rihgt')
+					ul.services-item-bullets
+						+bullet('3/1', 'Создание логотипа', '3', '1', '500')
+						+bullet('3/2', 'Дизайн полиграфии', '3', '2', '700')
+						+bullet('3/3', 'Разработка фирменного стиля', '3', '3', '800')
+
+						+bullet('3/4', 'Оформление социальных сетей и сайтов', '3', '4', '900')
+						+bullet('3/5', 'Дизайн наружной и интерьерной рекламы', '3', '5', '1000')
+
+			li.services-item.services--seo
+				.container.services-container
+					+serviceInfo(
+					'SEO & Digital WEB',
+					'Продвижение сайта',
+					'Выведем ваш сайт в ТОП поисковых запросов Яндекс и Google, приведем бесплатный трафик за счет SEO-копирайтинга, ситуативного маркетинга и развития социальных сетей', 'left')
+					ul.services-item-bullets
+						+bullet('4-seo/1', 'Продвижение сайта', '4-seo', '1', '500')
+						+bullet('4-seo/2', 'Реклама сайта в социальных сетях', '4-seo', '2', '700')
+						+bullet('4-seo/3', 'Контекстная реклама в Яндекс Директ и Google Adwords', '4-seo', '3', '900')
+
+						+bullet('4-seo/4', 'SEO оптимизация', '4-seo', '4', '1100')
+
+			li.services-item.services--support
+				.container.services-container
+					+serviceInfo(
+					'Support',
+					'Поддержка действующих проектов',
+					'Так бывает, что встречаются недобросовестные исполнители, за которыми приходится исправлять ошибки или что-то доделывать. Наши сотрудники понимают это и берутся за такого рода работу, чтобы сделать интернет-пространство лучше', 'rihgt')
+					ul.services-item-bullets
+						+bullet('5-support/1', 'Новый дизайн', '5-support', '1')
+						+bullet('5-support/2', 'Аналитика', '5-support', '2')
+						+bullet('5-support/3', 'Монтаж видео', '5-support', '3')
+
+						+bullet('5-support/4', 'Автоматизация процессов', '5-support', '4')
+						+bullet('5-support/5', 'Правки кода', '5-support', '5')
+						+bullet('5-support/6', 'Обработка фотографий', '5-support', '6')
+
+						+bullet('5-support/7', 'Настройка таргет. релкамы', '5-support', '7')
+						+bullet('5-support/8', 'Настройка контекстной рекламы', '5-support', '8')
+						+bullet('5-support/9', 'Написание всех видов текстов', '5-support', '9')
+
+			li.services-item.services--world
+				.container.services-container
+					.services-item-info(data-aos="fade-left" data-aos-duration='500')
+						h3.services-item__title World marketing
+						h4.services-item__subitile Продвижение товаров и услуг на мировых торговых площадках: Amazon, Avito, eBay, Alibaba и др.
+						p.services-item__text Перспективы масштабировать бизнес далеко за пределами своей страны теперь реален и доступен каждому. <a href="#">Владислав Фадеев</a> и его команда не просто продвинут ваш товар/услугу на мировом рынке, а ещё автоматизируют процессы продаж, приведут платежеспособных клиентов и окажут техническую поддержку в любое время суток
+						button.btn.services-item__btn Узнать стоимость
+
+					ul.services-item-bullets
+						+bullet('6--world/1', 'Создание и продвижение магазинов на торговых площадках под ключ', '6--world', '1', '500')
+						+bullet('6--world/2', 'Продвижение товаров/услуг в топ поиска на торговых площадках', '6--world', '2', '700')
+						+bullet('6--world/3', 'Прогнозирование продаж товаров/услуг', '6--world', '3', '900')
+
+						+bullet('6--world/4', 'Пакетное добавление товаров/услуг', '6--world', '4', '1100')
+
+						li.services-item__bullet(data-aos="fade-up" data-aos-duration='1300')
+							img(src="static/img/content/4-services/6--world/5.png", alt="Помощь в покупке и доставке товаров").services-item__bullet-icon
+							p.services-item__bullet-text
+								a(href="#") Помощь в покупке и доставке товаров
+							img.services-item__bullet-bg(src="static/img/content/4-services/6--world/bg/5.png", alt="bg")
+						+bullet('6--world/6', 'Тех. поддержка онлайн-магазинов', '6--world', '6')

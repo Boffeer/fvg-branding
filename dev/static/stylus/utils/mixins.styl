@@ -1,0 +1,93 @@
+absolute-center()
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%,-50%)
+
+absolute-all(num)
+	position absolute
+	top num
+	bottom num
+	right num
+	left num
+
+position($position, $top = null, $right = null,  $bottom = null, $left = null)
+	position: $position
+	if $left is a 'unit' or $left == 'auto'
+		left: $left
+	if $right is a 'unit' or $right == 'auto'
+		right: $right
+	if $top is a 'unit' or $top == 'auto'
+		top: $top
+	if $bottom is a 'unit' or $bottom == 'auto'
+		bottom: $bottom
+
+absolute($top = null, $right = null,  $bottom = null, $left = null)
+	position(absolute, $top, $right, $bottom, $left)
+
+fixed($top = null, $right = null,  $bottom = null, $left = null)
+	position(fixed, $top, $right, $bottom, $left)
+
+relative($top = null, $right = null,  $bottom = null, $left = null)
+	position(relative, $top, $right, $bottom, $left)
+
+rem(size)
+	return (size/16)rem
+
+size(a, b = false)
+	width a
+	if b
+		height b
+	else
+		height a
+
+
+btn-red-shade()
+// 	box-shadow: 0px -0.193708px 3.59743px rgba(211, 49, 49, 0.0843437), 0px -0.465507px 8.64513px rgba(211, 49, 49, 0.121168), 0px -0.876509px 16.278px rgba(211, 49, 49, 0.15), 0px -1.56354px 29.0372px rgba(211, 49, 49, 0.178832), 0px -2.92443px 54.3109px rgba(211, 49, 49, 0.215656), 0px -7px 130px rgba(211, 49, 49, 0.3);
+
+
+smm-shade()
+	box-shadow: 0px 3.45907px 2.13079px rgba(144, 0, 0, 0.0646635), 0px 8.31263px 5.12058px rgba(144, 0, 0, 0.0928953), 0px 15.6519px 9.64159px rgba(144, 0, 0, 0.115), 0px 27.9204px 17.199px rgba(144, 0, 0, 0.137105), 0px 52.222px 32.1688px rgba(144, 0, 0, 0.165337);
+
+web-shade()
+	box-shadow: 0px 2.07544px 2.68424px rgba(8, 117, 180, 0.106835), 0px 4.98758px 6.4506px rgba(8, 117, 180, 0.153479), 0px 9.39116px 12.1459px rgba(8, 117, 180, 0.19), 0px 16.7522px 21.6662px rgba(8, 117, 180, 0.226521), 0px 31.3332px 40.5243px rgba(8, 117, 180, 0.273165);
+
+design-shade()
+	box-shadow: 0px 2.76726px 4.06787px rgba(130, 30, 156, 0.171499), 0px 6.6501px 9.77565px rgba(130, 30, 156, 0.246375), 0px 12.5216px 18.4067px rgba(130, 30, 156, 0.305), 0px 22.3363px 32.8344px rgba(130, 30, 156, 0.363625), 0px 41.7776px 61.4131px rgba(130, 30, 156, 0.438501);
+
+seo-shade()
+	box-shadow: 0px 2.76726px 2.21381px rgba(158, 77, 3, 0.0815322), 0px 6.6501px 5.32008px rgba(158, 77, 3, 0.117129), 0px 12.5216px 10.0172px rgba(158, 77, 3, 0.145), 0px 22.3363px 17.869px rgba(158, 77, 3, 0.172871), 0px 41.7776px 33.4221px rgba(158, 77, 3, 0.208468);
+
+support-shade()
+	box-shadow: 0px 2.76726px 2.21381px rgba(0, 163, 68, 0.0759093), 0px 6.6501px 5.32008px rgba(0, 163, 68, 0.109051), 0px 12.5216px 10.0172px rgba(0, 163, 68, 0.135), 0px 22.3363px 17.869px rgba(0, 163, 68, 0.160949), 0px 41.7776px 33.4221px rgba(0, 163, 68, 0.194091);
+
+world-shade()
+	box-shadow: 	0px 3.45907px 2.13079px rgba(144, 0, 0, 0.0646635), 0px 8.31263px 5.12058px rgba(144, 0, 0, 0.0928953), 0px 15.6519px 9.64159px rgba(144, 0, 0, 0.115), 0px 27.9204px 17.199px rgba(144, 0, 0, 0.137105), 0px 52.222px 32.1688px rgba(144, 0, 0, 0.165337);
+
+
+service-blob(co, w, l, t = false, w2 = false)
+	.services-item__bullet:nth-child({co})
+		if w2
+			// .services-item__bullet:nth-child({co})
+			max-width w2 !important
+		.services-item__bullet-bg
+			width w
+			left l
+			if t
+				top t
+
+
+mixin divider(img, mirrorX = false, mirrorY = false, t= false)
+	content ''
+	background-image url("../img/content/" + img + ".png")
+	background-size cover
+	display block
+	object-fit cover
+	position absolute
+	width 100vw
+	height 100px
+	transform scale(mirrorX, mirrorY)
+	if t
+		bottom 100px
+	else
+		top -100px

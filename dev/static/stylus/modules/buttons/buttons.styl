@@ -1,0 +1,123 @@
+.btn
+	display block
+	padding 12px 68px
+	border-radius 50px
+	border none
+	line-height 2
+
+	background-color clr-prim
+	color clr-f
+	transition all 0.3s
+	cursor pointer
+
+	font-weight 600
+	font-size f-regular
+	font-family mainFont
+
+	btn-red-shade()
+
+	&:hover
+		box-shadow: 0px -0.193708px 3.59743px rgba(211, 49, 49, 0.38), 0px -0.465507px 8.64513px rgba(211, 49, 49, 0.42), 0px -0.876509px 16.278px rgba(211, 49, 49, 0.35), 0px -1.56354px 29.0372px rgba(211, 49, 49, 0.37), 0px -2.92443px 54.3109px rgba(211, 49, 49, 0.41), 0px -7px 130px rgba(211, 49, 49, 0.5);
+		transition all 0.3s
+
+.btn-secondary
+	padding 12px 26px
+	font-size 16px
+	font-weight 600
+	border 3px solid clr-prim
+	border-radius 50px
+	background-color transparent
+	color clr-f
+	transition all 0.3s ease
+	&:hover
+		background-color clr-prim
+		transition all 0.3s ease
+		
+.services-item__btn
+	background-color: clr-service-btn
+
+	&:hover
+		background-color clr-f
+		color clr-f--d
+
+.services--smm
+	.services-item__btn
+		smm-shade()
+
+.services--web
+	.services-item__btn
+		web-shade()
+
+.services--design
+	.services-item__btn
+		design-shade()
+
+.services--seo
+	.services-item__btn
+		seo-shade()
+
+.services--support
+	.services-item__btn
+		support-shade()
+
+.services--world
+	.services-item__btn
+		world-shade()
+
+
+.cases-item__btn
+	border 3px clr-prim solid
+	box-sizing border-box
+
+	background-color transparent
+	color clr-f--d
+	box-shadow none
+
+	&:hover
+		background-color clr-prim
+		color clr-f
+		transition all 0.3s
+
+
+.slick-dots
+	bottom -50px !important
+	li
+		background-color clr-prim
+		width 50px !important
+		height 10px !important
+		border-radius 16px
+		margin-right 20px !important
+		margin-left 0 !important
+		opacity 0.5
+	*
+		color clr-prim
+		button
+			&:before
+				color clr-prim
+				display none !important
+				
+.slick-active
+	opacity 1 !important
+	
+			
+.g-input
+	font-size: 16px;
+	font-weight: 600;
+	// color: #c8c8c8;
+	line-height: 2;
+	padding: 12px 32px;
+	margin-bottom: 26px;
+	border: none;
+	border-radius: 12px;
+	
+
+.modal_close-btn
+	border-radius 50%
+	background-color #232323
+	color #fff
+	border none
+	position absolute
+	right 20px
+	top 20px
+	font-weight 900
+	padding 5px 8px

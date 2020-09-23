@@ -1,0 +1,121 @@
+.factors
+	padding-top 50px
+	margin-bottom s2x + s2
+	background-color clr-bg--d
+	position relative
+	&:before
+			content ''
+			background-image url('../img/content/2-7-princip/2t.png')
+			background-size cover
+			display block
+			position absolute
+			top -140px
+			width 100%
+			height 150px
+	&-item
+		padding s2 0
+		display flex
+		align-items center
+		&-text
+			font-size 20px
+			max-width 494px
+			span
+				font-weight 600
+				color clr-second
+		&__title
+			color clr-second
+			margin-bottom s1
+			font-weight 900
+		&__text
+			margin-bottom s1
+		&__pic
+			max-width 60%
+			height auto
+
+		&--1
+			padding s2 0
+			background-color clr-bg--d
+			position relative
+			&:after
+				content ''
+				background-image url('../img/content/2-7-princip/2b.png')
+				background-size cover
+				display block
+				position absolute
+				bottom -140px
+				width 100%
+				height 150px
+				transform: scale(-1, 1)
+			.factors-item-text
+				order 3
+		&--2
+			padding s2x 0
+			background-color clr-bg--l
+		&--3
+			// padding 200px 0
+			background-color clr-bg--d
+			position relative
+			&:before
+				content ''
+				background-image url('../img/content/2-7-princip/2t.png')
+				background-size cover
+				transform: scale(-1, 1)
+				display block
+				object-fit: cover;
+				position absolute
+				top -100px
+				width 100%
+				height 100px
+			&:after
+				content ''
+				background-image url('../img/content/2-7-princip/4b.png')
+				background-size cover
+				display block
+				position absolute
+				bottom -140px
+				width 100%
+				height 150px
+			.factors-item-text
+				order 3
+		&--4
+			background-color clr-bg--l
+			padding s2 0
+			img
+				width 35%
+				margin-bottom s2
+		&--5
+			// padding-bottom s2
+			background-color clr-bg--d
+			position relative
+			&:before
+				content ''
+				background-image url('../img/content/2-7-princip/2t.png')
+				background-size cover
+				display block
+				position absolute
+				top -150px
+				width 100%
+				height 150px
+			&:after
+				content ''
+				background-image url('../img/content/2-7-princip/2b.png')
+				background-size cover
+				display block
+				position absolute
+				bottom -140px
+				width 100%
+				height 150px
+				transform: scale(-1, 1)
+			.factors-item-text
+				order 3
+			.factors-item__pic
+				width 40%
+
+	&-container
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content space-around
