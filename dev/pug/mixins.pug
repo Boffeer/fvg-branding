@@ -35,7 +35,91 @@ mixin caseItem(caseNumber, title, ...results)
 			// li.cases-item__stat Срок
 			// 	span= long
 		p.cases-item__text= text
-		button.btn.cases-item__btn(class="case-item__btn--"+caseNumber) Подробнее
+		button.btn.cases-item__btn(class="case-item__btn--"+caseNumber, data-case-number= caseNumber) Подробнее
+
+
+// mixin bullet(img, text, section, bg, time)
+// 	li.services-item__bullet(data-aos="fade-up" data-aos-duration=time)
+// 		img(src="static/img/content/4-services/"+img+".png", alt="text").services-item__bullet-icon
+// 		p.services-item__bullet-text= text
+// 		img.services-item__bullet-bg(src="static/img/content/4-services/"+section+"/bg/"+bg+".png", alt="bg")
+
+// mixin caseBullet(number, text, section, bg, time)
+// 	li.services-item__bullet.case-modal-bubble(class=".case-modal-bubble--"+number,data-aos="fade-up" data-aos-duration=time)
+// 		p.case-modal-bubble_text.services-item__bullet-text= text
+// 		img.services-item__bullet-bg(src="static/img/content/4-services/"+section+"/bg/"+bg+".png", alt="bg")
+
+mixin caseItemOpen(number)
+	.case-modal_wrap(class="case-modal--"+number)
+		.case-modal
+			button(type="button").modal_close-btn ×
+			.case-modal_hero
+				.case-modal-headliner
+					h3.case-modal_headliner Полная упаковка сервиса по аренде авто в Краснодаре
+					a.case-modal_link(href="#") legioncar.ru
+					p.case-modal_phrase Сотрудничаем с мая 2019 года и по сегодняший день
+				img.case-modal_pic(src="")
+			.case-modal-bubbles
+				.case-modal_bubble__1 Разработали дизайн сайта удобный для пользователя
+				.case-modal_bubble__2 Сделали СЕО, настроили контекстную рекламу и получили клиентов из Яндекса и Гугла
+				.case-modal_bubble__3 Настроили таргетированную рекламу
+				.case-modal_bubble__4 Запустили сайт
+			h4.case-modal_title Проблемы клиента и как мы их решали
+
+			.case-modal-problem
+				.case-modal-problem-header
+
+					span.case-modal-problem_number= number
+
+					h4.case-modal-problem_header Предыдущий сайт на конструкторе долго грузился и не давал реализовать функционал, нужный клиентам для комфортного заказа авто.
+				.case-modal-problem_descr 
+					p Поэтому мы сделали новый сайт. 
+
+					p Собрали всю информацию про проекту и распределили ее на 5 основных страниц, каждая из которых представляла свое направление и состояла также из фильтров. 
+
+					p Кроме визуальной составляющей и механики, мы провели SEO-оптимизацию, подобрали ключи и полностью переписали тексты.
+
+			.case-modal-additional
+				p.case-modal-additional_text В таргетированной рекламе акцент сделали на большой выбор автомобилей на все случаи жизни, статусность бренда и возможности, которые дает прокат своим клиентам. Для визуальной составляющей выбирали живые, сочные фотографии и динамичные видео. 
+				.case-modal-additional-bullets
+					h4.case-modal-additional-bullets_title Целевые аудитории: 
+					.case-modal-additional_bullet__1 Бизнесмены
+					.case-modal-additional_bullet__2 Мамы 28+
+					.case-modal-additional_bullet__3 Молодые пары
+					.case-modal-additional_bullet__4 Семьи
+					.case-modal-additional_bullet__5 Офисные сотрудники и др
+			
+			.case-modal-results
+				h4.case-modal-results_title Результаты
+				ul.case-modal-results_list
+					li.case-modal-results_item.case-modal-results_item--1 Динамично растущая база постоянных клиентов проката
+					li.case-modal-results_item.case-modal-results_item--2 Новый эффективный, лего читаемый сайт, подходящий к запросам клиентов
+					li.case-modal-results_item.case-modal-results_item--3 Настроенная контекстная и таргетированная реклама, приносящая прирост клиентов ежемесячно.
+					li.case-modal-results_item.case-modal-results_item--4 Разрабатываем мобильное приложение, которое даст клиентам упрощенный вариант использования авто
+					li.case-modal-results_item.case-modal-results_item--5 Успешно работаем с жалобами, вопросами аудитории
+					li.case-modal-results_item.case-modal-results_item--6 Повышение конверсий на 35% каждый месяц
+
+			.form2
+				h2.form-title Чем дольше вы думаете, тем больше денег зарабатывают ваши конкуренты
+				.form2-contacts
+					.form2-call
+						p.form2-cta Позвоните нам
+						.phone-numbers
+							a.phone-russia(href="") +7 123 456 27 23
+							a.phone-belarus(href="") +375 123 456 27 23
+					form(action="")
+						input.g-input(
+							type="tel" 
+							placeholder="Оставьте номер телефона" 
+							required)
+						input.btn(
+							type="submit"
+							value="Отправить").btn
+						p.gdpr-caption Нажимая кнопку «Отправить», я даю согласие на передачу персональныхданных согласно политике конфиденциальности
+
+
+
+
 
 
 // work

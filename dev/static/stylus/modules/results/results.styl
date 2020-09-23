@@ -17,20 +17,19 @@
       top -100px
       width 99vw
       height 100px
-    &:after
-      display block
-      content ''
-      background-color red
-      background-image url('../img/content/3-results/divider.png')
-      background-size cover
-      background-position 50% 100%
-      transform: scale(-1, -1)
-      position absolute
-      left 0
-      top -100px
-      z-index 0
-      width 100vw
-      height 100px
+    // &:after
+    //   display block
+    //   content ''
+    //   background-image url('../img/content/3-results/divider.png')
+    //   background-size cover
+    //   background-position 50% 100%
+    //   transform: scale(-1, -1)
+    //   position absolute
+    //   left 0
+    //   top -100px
+    //   z-index 0
+    //   width 100vw
+    //   height 100px
 
   &-list
     display flex
@@ -80,3 +79,42 @@
       margin-bottom s1
       font-size 32px
       font-weight 900
+      
+
+.results-item
+  transition all 0.3s ease
+.results-item--cl:hover
+  background-color lightness(clr-cl, 40%)
+  transition all 0.3s ease
+  color #232323
+.results-item--vk:hover
+  background-color lightness(clr-vk, 40%)
+  transition all 0.3s ease
+  // background-color clr-vk
+.results-item--ig:hover
+  background-color lightness(clr-ig, 40%)
+  transition all 0.3s ease
+  // background-color clr-ig
+.results-item--tg:hover
+  background-color lightness(clr-tg, 30%)
+  transition all 0.3s ease
+  // background-color clr-tg
+.results-item--mn:hover
+  background-color lightness(clr-mn, 40%)
+  transition all 0.3s ease
+  // background-color clr-mn
+
+
+@media (max-width 1024px)
+  .results-list
+    flex-wrap wrap
+    justify-content space-around
+    
+@media (max-width 375px)
+  .results
+    padding-top 62px
+    padding-bottom 62px
+  .results-item
+    margin-bottom 84px
+  .results-item__number
+    margin-bottom 13px

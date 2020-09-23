@@ -28,3 +28,21 @@
 	position absolute
 	right -200px
 	top -200px
+	
+
+
+/* Portrait tablets and small desktops */
+@media (min-width: tabletPor) and (max-width: tabletLand)
+	.founder-pic
+		right -450px
+		
+@media (max-width 375px)
+	.founder
+		padding-bottom 68px
+	.founder-stats
+		display flex
+		flex-direction column
+		padding-left 30px
+	.founder-pic
+		right -500px
+		transform rotate(-45deg)

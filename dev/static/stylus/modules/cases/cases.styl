@@ -71,3 +71,214 @@
 
 		&__text
 			margin-bottom s1
+			
+
+@media (max-width 375px)
+	.cases-item
+		padding 32px 65px
+		margin-right 26px
+		min-width 320px
+// open
+.case-modal_wrap
+	position fixed
+	top 0
+	left 0
+	display none
+	justify-content center
+	width 100vw
+	height 100vw
+	padding-top 80px
+	background-color rgba(#000, 0.8)
+	z-index 1000
+
+.case-modal
+	background-color clr-bg--d
+	max-width 1260px
+	max-height: 80vh;
+	overflow-y: auto;
+	padding 68px
+	border-radius 12px
+	
+
+.case-modal_hero
+	display flex
+	align-items center
+	min-height 60vh
+.case-modal-headliner
+	max-width 50%
+.case-modal_headliner
+	font-size 40px
+	font-weight 900
+.case-modal_link
+	font-size 40px
+	color clr-second
+	font-weight 400
+	margin-bottom 36px
+.case-modal_phrase
+	opacity .8
+	padding-top 20px
+	
+.case-modal-bubbles
+	display flex
+	justify-content space-around
+	margin-bottom 124px
+	*
+		max-width 252px
+		font-size 18px
+		line-height 1.5
+	.case-modal_bubble__1
+		position relative
+		&:before
+			content url('../img/content/6-cases/bullets/1.png')
+			position absolute
+			top -1.5rem
+			left -5.8rem
+		
+	.case-modal_bubble__2
+		position relative
+		&:before
+			content url('../img/content/6-cases/bullets/2.png')
+			position absolute
+			top -0.3rem
+			left -3.8rem
+.case-modal_bubble__3
+		position relative
+		&:before
+			content url('../img/content/6-cases/bullets/3.png')
+			position absolute
+			top -0.3rem
+			left -3.8rem
+.case-modal_bubble__4
+		position relative
+		&:before
+			content url('../img/content/6-cases/bullets/4.png')
+			position absolute
+			top -0.3rem
+			left -6.8rem
+
+.case-modal_title
+.case-modal-results_title
+	font-size 32px
+	text-align center
+	font-weight 900
+	margin-bottom 62px
+	
+.case-modal-problem
+	display flex
+	justify-content center 
+	flex-direction column
+	align-items center
+	margin-bottom 66px
+.case-modal-problem-header
+	display flex
+	align-items center
+	padding 27px 49px
+	max-width 769px
+	background-color clr-bg--l
+	border-radius 12px
+	box-shadow: 0px 17px 80px rgba(0, 15, 64, 0.38), 0px 7.10219px 33.4221px rgba(0, 15, 64, 0.273165), 0px 3.79717px 17.869px rgba(0, 15, 64, 0.226521), 0px 2.12866px 10.0172px rgba(0, 15, 64, 0.19), 0px 1.13052px 5.32008px rgba(0, 15, 64, 0.153479), 0px 0.470434px 2.21381px rgba(0, 15, 64, 0.106835);
+.case-modal-problem_number
+	font-size 111px
+	font-weight 900
+	margin-right 26px
+	color clr-second
+.case-modal-problem_header
+	font-size 18px
+	line-height 2
+.case-modal-problem_descr 
+	background-color #fff
+	color #232323
+	padding 51px 60px 34px
+	max-width 715px
+	border-radius 0 0 12px 12px
+	p
+		margin-bottom 26px
+
+.case-modal-additional
+	display flex
+	justify-content space-around
+.case-modal-additional_text
+	max-width 538px
+	font-size 18px
+.case-modal-additional-bullets_title
+	line-height 2
+	margin-bottom 26px
+.case-modal-additional_bullet__1
+	padding-left 26px
+	margin-bottom 15px
+	position relative
+	font-size 18px
+	&:before
+		content url('../img/content/6-cases/bullets/1.png')
+		position absolute
+		top -1.5rem
+		left -4.4rem
+.case-modal-additional_bullet__2
+	padding-left 26px
+	margin-bottom 15px
+	position relative
+	font-size 18px
+	&:before
+		content url('../img/content/6-cases/bullets/2.png')
+		position absolute
+		top -0.3rem
+		left -2.5rem
+.case-modal-additional_bullet__3
+	padding-left 26px
+	margin-bottom 15px
+	position relative
+	font-size 18px
+	&:before
+		content url('../img/content/6-cases/bullets/3.png')
+		position absolute
+		top -0.3rem
+		left -2.5rem
+.case-modal-additional_bullet__4
+	padding-left 26px
+	margin-bottom 15px
+	position relative
+	font-size 18px
+	&:before
+		content url('../img/content/6-cases/bullets/4.png')
+		position absolute
+		top -0.3rem
+		left -5.2rem
+.case-modal-additional_bullet__5
+	padding-left 26px
+	margin-bottom 15px
+	position relative
+	font-size 18px
+	&:before
+		content url('../img/content/6-cases/bullets/5.png')
+		position absolute
+		top -0.5rem
+		left -2.8rem
+		
+.case-modal-results_list
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+	margin-bottom 124px
+.case-modal-results_item
+	background-color #fff
+	border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
+	max-width 290px
+	padding 2rem
+	margin-bottom 26px
+	text-align center
+	line-height 1.5
+	&--1
+		background-color: clr-smm
+	&--2
+		background-color clr-web
+	&--3
+		background-color clr-seo
+	&--4
+		background-color clr-design
+	&--5
+		background-color clr-support
+	&--6
+		background-color clr-world
+
+	
+	

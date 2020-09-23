@@ -39,19 +39,46 @@ section.hero
 			required).g-input
 		button.btn Заказать
 
-//- .hero-menu
-//- 	.hero-menu_top
-//- 		picture.hero-menu-logo
-//- 			source(
-//- 				srcset='static/img/general/fvg-small-logo.svg'
-//- 				media='(max-width: 200px)')
-//- 			source(
-//- 				srcset='static/img/general/fvg-small-logo.svg'
-//- 				media='(max-width: 500px)')
-//- 			source(
-//- 				srcset='static/img/general/fvg-small-logo.svg'
-//- 				media='(max-width: 800px)')
-//- 			img.hero-menu-logo--inside(
-//- 				src='static/img/general/fvg-big-logo.svg',
-//- 				alt='')
-		
+.menu_wrap
+	.container
+		.menu
+			.menu_top
+				picture.menu-logo
+					source(
+						srcset='static/img/general/fvg-small-logo.svg'
+						media='(max-width: 200px)')
+					source(
+						srcset='static/img/general/fvg-small-logo.svg'
+						media='(max-width: 500px)')
+					source(
+						srcset='static/img/general/fvg-small-logo.svg'
+						media='(max-width: 800px)')
+					img.hero-menu-logo--inside(
+						src='static/img/general/fvg-big-logo.svg',
+						alt='')
+				button.menu-burger_close
+					span.burger-close_left
+					span.burger-close_right
+			.menu_bottom
+				.menu_contacts
+					a.menu_item.phone-russia(href="") +7 123 456 27 23
+					a.menu_item.phone-belarus(href="") +375 123 456 27 23
+					a.menu_item.hero-menu_email(href="") hello@fvg.com
+					button.menu_item.btn-secondary.hero_callback Заказать звонок
+					.hero-socials
+						a(href=" ")
+							img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+						a(href="")
+							img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+						a(href="")
+							img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+						a(href="")
+							img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+						a(href="")
+							img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+
+				nav.menu_nav
+					a.menu_nav-item(href="#services") Услуги
+					button.menu_nav-item.hero_callback Закзать услуги
+					a.menu_nav-item(href="#cases") Кейсы
+					a.menu_nav-item(href="#work") Как мы рабоатем

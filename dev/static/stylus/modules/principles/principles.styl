@@ -103,3 +103,28 @@
 		display flex
 		align-items center
 		justify-content space-around
+		
+@media (max-width 375px)
+	.principles-container
+		flex-wrap wrap
+	.principles-item--1
+	.principles-item--3
+	.principles-item--5
+	.principles-item--7
+		.principles-container
+			flex-direction column-reverse
+	.principles-item__pic
+		width 80% !important
+		max-width 80% !important
+		margin-bottom 32px
+	.principles-item--1
+		padding-top 0
+		padding-bottom 162px
+	.principles-item--3
+		padding-top 124px
+	.principles-item--5
+		padding-top 124px
+		padding-bottom 124px
+	.principles-item-text
+		padding-left 12px
+		padding-right 12px

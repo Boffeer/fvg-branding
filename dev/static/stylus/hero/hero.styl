@@ -4,6 +4,14 @@
 	background-size cover
 	background-repeat no-repeat
 
+@media (max-width 1366px)
+	.hero
+		background-position: -250px 0
+@media (max-width 1024px)
+	.hero
+		height 70vh
+		background-position: -350px 0
+
 .hero-modal_wrap
 	display none
 	align-items center
@@ -43,6 +51,7 @@
 	padding-top 30px
 	margin-bottom 183px
 .burger
+.menu-burger_close
 	border none
 	background-color transparent
 	size(30px)
@@ -92,8 +101,118 @@
 	
 
 
-// .hero-menu
-// 	position fixed
-// 	top 0
-// 	left 0
-// 	z-index 10000
+.menu_wrap
+	display none
+	position fixed
+	top 0
+	left 0
+	z-index 10000
+	width 100vw
+	height 100vh
+	
+	background-color clr-bg--d
+	&:before
+		content url('../img/content/0-burger/burger-guy.png')
+		position absolute
+
+
+.menu_top
+.menu_bottom
+	display flex
+	justify-content space-between
+	align-items center
+	
+.menu_top
+	padding-top 50px
+.menu-burger_close
+	position relative
+.burger-close_left
+		position absolute
+		transform rotate(45deg)
+		top 12px
+.burger-close_right
+		transform rotate(-45deg)
+.menu_bottom
+	height 90vh
+	
+.menu_contacts
+	display flex
+	flex-direction column
+	align-items flex-start
+	justify-content center
+	.phone-belarus
+		margin-bottom 15px
+	.hero-menu_email
+		margin-bottom 26px
+	button
+		margin-bottom 26px
+		margin-left 50px
+.menu_item
+	padding-left 50px
+	font-size 26px
+	color clr-f
+	font-weight 400
+	&:hover
+		color clr-second
+	&:before
+		top -0.1em
+		left -0.2em !important
+		
+.menu_nav
+	display flex
+	flex-direction column
+	align-items flex-end
+	&-item
+		font-size 60px
+		font-weight 900
+		color clr-f
+		line-height 1.5
+		border none
+		background-color transparent
+		&:hover
+			color clr-prim
+
+@media (max-width 375px)
+	.hero
+		// background-image linear-gradient(45%, clr-bg--l, clr-bg--d), url('../img/content/1-hero/hero-bg.png')
+		background-image linear-gradient(45deg, rgba(clr-bg--d, 0.7), rgba(clr-bg--l, 0.7)), url('../img/content/1-hero/hero-bg.png')
+		background-position: 0 0
+		height 100vh
+	.header
+		margin-bottom 68px
+		padding 20px 30px 0
+		.hero_callback
+			display none
+	.menu_top
+		padding-left 20px
+		padding-right 20px
+		padding-top 10px
+		margin-bottom 68px
+	.menu-logo
+		img
+			height 70px
+			
+	.offer
+		max-width 100%
+	.hero-content
+		width 100%
+	.hero-logo
+		height 79px
+	.descriptor
+		line-height 1.4
+		
+
+	.menu_bottom
+		display flex
+		flex-direction column
+		height auto
+	.menu_nav
+		order -1
+		margin-bottom 68px
+	.menu_nav-item
+		font-size 36px
+		
+	.menu_contacts
+		align-items center
+	.menu_item
+		margin-right 26px
