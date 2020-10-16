@@ -1,3 +1,15 @@
+.factors_guy
+	position absolute
+	top -4.5rem
+	left 45%
+	z-index 3
+
+.factors_cape
+	position absolute
+	top 0
+	left 50%
+	z-index -1
+
 .factors
 	padding-top 50px
 	margin-bottom s2x + s2
@@ -119,7 +131,7 @@
 		display flex
 		align-items center
 		justify-content space-around
-		
+
 
 @media (max-width 375px)
 	.factors-item__title
@@ -146,3 +158,14 @@
 			flex-direction column-reverse
 	.factors-item--5
 		padding-top 0
+
+	.factors:before
+	.factors-item--3:before
+	.factors-item--5:before
+		height 40px
+		top -40px
+	.factors-item--1:after
+	.factors-item--3:after
+	.factors-item--5:after
+		bottom -50px
+		height 50px

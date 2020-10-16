@@ -4,9 +4,9 @@
 	background-size cover
 	background-repeat no-repeat
 
-@media (max-width 1366px)
-	.hero
-		background-position: -250px 0
+// @media (max-width 1366px)
+// 	.hero
+// 		background-position: -250px 0
 @media (max-width 1024px)
 	.hero
 		height 70vh
@@ -36,7 +36,7 @@
 	h3
 		text-align center
 		margin-bottom 26px
-		
+
 
 .hero-content
 	width 526px
@@ -49,7 +49,9 @@
 	align-items center
 	width 100%
 	padding-top 30px
-	margin-bottom 183px
+	margin-bottom 65px
+.menu
+	background-image url('img/content/0-burger/burger-bg.png')
 .burger
 .menu-burger_close
 	border none
@@ -98,7 +100,7 @@
 	width 347px
 .hero-socials_icon
 	max-height 48px
-	
+
 
 
 .menu_wrap
@@ -109,8 +111,9 @@
 	z-index 10000
 	width 100vw
 	height 100vh
-	
-	background-color clr-bg--d
+
+	// background-color clr-bg--d
+	background-image url('../img/content/0-burger/burger-bg.png')
 	&:before
 		content url('../img/content/0-burger/burger-guy.png')
 		position absolute
@@ -121,11 +124,12 @@
 	display flex
 	justify-content space-between
 	align-items center
-	
+
 .menu_top
 	padding-top 50px
 .menu-burger_close
 	position relative
+	align-self flex-start
 .burger-close_left
 		position absolute
 		transform rotate(45deg)
@@ -134,7 +138,7 @@
 		transform rotate(-45deg)
 .menu_bottom
 	height 90vh
-	
+
 .menu_contacts
 	display flex
 	flex-direction column
@@ -144,6 +148,7 @@
 		margin-bottom 15px
 	.hero-menu_email
 		margin-bottom 26px
+		padding-left 0 !important
 	button
 		margin-bottom 26px
 		margin-left 50px
@@ -157,7 +162,7 @@
 	&:before
 		top -0.1em
 		left -0.2em !important
-		
+
 .menu_nav
 	display flex
 	flex-direction column
@@ -172,11 +177,20 @@
 		&:hover
 			color clr-prim
 
-@media (max-width 375px)
+@media (max-width 480px)
+	.menu_wrap:before
+		position absolute
+		left -4rem
+
+	.menu_nav
+		position relative
+	.menu-burger_close
+		margin-top 20px
 	.hero
 		// background-image linear-gradient(45%, clr-bg--l, clr-bg--d), url('../img/content/1-hero/hero-bg.png')
 		background-image linear-gradient(45deg, rgba(clr-bg--d, 0.7), rgba(clr-bg--l, 0.7)), url('../img/content/1-hero/hero-bg.png')
-		background-position: 0 0
+		background-position: -20vw 0
+		background-size 380%
 		height 100vh
 	.header
 		margin-bottom 68px
@@ -191,7 +205,7 @@
 	.menu-logo
 		img
 			height 70px
-			
+
 	.offer
 		max-width 100%
 	.hero-content
@@ -200,7 +214,7 @@
 		height 79px
 	.descriptor
 		line-height 1.4
-		
+
 
 	.menu_bottom
 		display flex
@@ -210,8 +224,8 @@
 		order -1
 		margin-bottom 68px
 	.menu_nav-item
-		font-size 36px
-		
+		font-size 34px
+
 	.menu_contacts
 		align-items center
 	.menu_item

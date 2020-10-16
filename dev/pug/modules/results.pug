@@ -1,38 +1,43 @@
 section.results-wrap
 	.container
 		.results
-			h2.section-title(data-shadow='Итоги последнего года') Итоги последнего года
+			.section-title-container
+				h2.section-title(data-shadow='Итоги последнего года') Итоги последнего года
+				img.results-guy(src="static/img/content/3-results/title.png", alt="")
+				img.results-cape(src="static/img/content/3-results/cape.png", alt="")
 			ul.results-list
 				li.results-item.results-item--cl(data-aos="fade-up" data-aos-duration="500")
 					.results-item__icon
-					h3.results-item__number.price 
-						span.counter-number 50
+					h3.results-item__number.price
+						span.counter-number(data-from="0" data-to="50") 50
 					p.results-item__text довольных клиентов
 
 				li.results-item.results-item--vk(data-aos="fade-up" data-aos-duration="700")
 					.results-item__icon
-					h3.results-item__number 
-						span.counter-number 1.5
+					h3.results-item__number
+						span.counter-number(data-from="0" data-to="1") 1
+						span .
+						span.counter-number(data-from="0" data-to="5") 5
 						span M+
 					p.results-item__text привлеченной аудитории в ВК
 
 				li.results-item.results-item--ig(data-aos="fade-up" data-aos-duration="800")
 					.results-item__icon
-					h3.results-item__number 
-						span.counter-number 1
+					h3.results-item__number
+						span.counter-number(data-from="0" data-to="1") 1
 						span M+
 					p.results-item__text привлеченной аудитории в Instagram
 
 				li.results-item.results-item--tg(data-aos="fade-up" data-aos-duration="900")
 					.results-item__icon
-					h3.results-item__number 
-						span.counter-number 300
+					h3.results-item__number
+						span.counter-number(data-from="0" data-to="300") 300
 						span k+
 					p.results-item__text привлеченной аудитории в Telegram
 
 				li.results-item.results-item--mn(data-aos="fade-up" data-aos-duration="1000")
 					.results-item__icon
 					h3.results-item__number $
-						span.counter-number 500
+						span.counter-number(data-from="0" data-to="500") 500
 						span k+
 					p.results-item__text чистой прибыли наших клиентов

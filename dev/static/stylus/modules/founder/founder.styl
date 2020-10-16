@@ -23,20 +23,21 @@
 			position absolute
 			top -10px
 			left -26px
-			
+
 .founder-pic
 	position absolute
 	right -200px
 	top -200px
-	
+	z-index -1
+
 
 
 /* Portrait tablets and small desktops */
 @media (min-width: tabletPor) and (max-width: tabletLand)
 	.founder-pic
 		right -450px
-		
-@media (max-width 375px)
+
+@media (max-width 480px)
 	.founder
 		padding-bottom 68px
 	.founder-stats
@@ -44,5 +45,5 @@
 		flex-direction column
 		padding-left 30px
 	.founder-pic
-		right -500px
+		right -520px
 		transform rotate(-45deg)

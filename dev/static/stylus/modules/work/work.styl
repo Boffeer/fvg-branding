@@ -1,5 +1,15 @@
 //
 // @media(max-width 736px)
+.work_guy
+	position absolute
+	top -6.5rem
+	right 17%
+	z-index 3
+.work_cape
+	position absolute
+	top -4.8rem
+	right 22%
+	z-index -1
 .work-wrap
 	padding 0 0 200px
 .work-item
@@ -21,6 +31,12 @@
 		height 5px
 		display block
 		z-index -1
-		
+
 .work-item--7:before
 	background-color transparent
+
+@media (max-width 480px)
+	.work_guy
+		right 3%
+	.work_cape
+		right 20%

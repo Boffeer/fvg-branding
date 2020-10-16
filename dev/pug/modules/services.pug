@@ -1,4 +1,4 @@
-section.services-wrap
+section.services-wrap#services
 	.services-modal_wrap
 		form.services-modal
 			button(type="button").modal_close-btn ×
@@ -18,7 +18,9 @@ section.services-wrap
 				)
 			button.services-modal_submit.btn Узнать стоимость
 	.services
-		h2.section-title(data-shadow="Наши услуги") Наши услуги
+		.services-title
+			img.services-guy(src="static/img/content/4-services/title.png", alt="")
+			h2.section-title(data-shadow="Наши услуги") Наши услуги
 		ul.services-list
 			li.services-item.services--smm
 				.container.services-container
@@ -125,4 +127,3 @@ section.services-wrap
 							img.services-item__bullet-bg(src="static/img/content/4-services/6--world/bg/5.png", alt="bg")
 						+bullet('6--world/6', 'Тех. поддержка онлайн-магазинов', '6--world', '6')
 					button.btn.services-item__btn.mobile-btn Узнать стоимость
-					

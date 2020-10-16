@@ -103,8 +103,13 @@
 		display flex
 		align-items center
 		justify-content space-around
-		
-@media (max-width 375px)
+.principles-guy
+	position absolute
+	top -16rem
+	left 10rem
+	z-index -1
+
+@media (max-width 480px)
 	.principles-container
 		flex-wrap wrap
 	.principles-item--1
@@ -122,9 +127,29 @@
 		padding-bottom 162px
 	.principles-item--3
 		padding-top 124px
+		padding-bottom 100px
+	.principles-item--4
+		padding-bottom 26px
 	.principles-item--5
 		padding-top 124px
 		padding-bottom 124px
+		.principles-item__pic
+			transform scale(1.5)
 	.principles-item-text
 		padding-left 12px
 		padding-right 12px
+	.principles-guy
+		left 0
+		top -16rem
+		right 10rem
+
+	.principles-item--2:before
+	.principles-item--4:before
+	.principles-item--6:before
+		height 50px
+		top -50px
+	.principles-item--2:after
+	.principles-item--4:after
+	.principles-item--6:after
+		height 50px
+		bottom -50px
