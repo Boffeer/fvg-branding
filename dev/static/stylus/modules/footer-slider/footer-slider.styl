@@ -18,6 +18,7 @@
 .delivery
 .world
 	margin 0 72px
+	overflow hidden
 	// box-shadow: 0px 6.88829px 45.7616px rgba(255, 255, 255, 0.141362);
 	border-radius 28px
 	min-height 700px !important
@@ -32,7 +33,7 @@
 
 
 
-.footer-slider_btn
+.footer-btn
 	display block
 	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #F41814;
 	background-blend-mode: overlay, normal;
@@ -40,7 +41,7 @@
 	font-weight 600
 	font-size 18px
 	border-radius 60px
-	padding 13px 73px
+	padding 13px 0
 	max-width 330px
 	line-height 2
 	text-align center
@@ -55,6 +56,7 @@
 	padding 90px 40px
 	background-image url('../img/content/footer-branding.png')
 	background-size cover
+	max-height 715px
 
 .branding_inner
 	max-width 45%
@@ -188,7 +190,8 @@
 
 @media(min-width 1800px)
 	.branding
-		background-position-x -150px
+		background-position-x -50px
+		padding-top 40px
 	.branding-line
 		height 330px
 
@@ -199,12 +202,16 @@
 		padding-top 20px
 		margin-bottom 20px
 	.branding
-		background-position-x -50px
+		background-position-x 0
 	.branding
 	.world
 		// background-position-x -80px
-		min-height 350px !important
+		min-height 546px !important
+		max-height 546px !important
 		width: 1260px !important;
+
+	.slick-dots
+		bottom -45px !important
 	.branding_title
 		font-size 40px
 		margin-bottom 20px
@@ -243,7 +250,7 @@
 		text-align center
 
 	.slide-inner
-		justify-content stretch
+		justify-content center
 	.branding
 	.delivery
 	.world
@@ -263,7 +270,7 @@
 	.world_inner
 		padding-top 150px
 	.branding
-		background-image url('../img/footer-content/branding-mobile.png')
+		background-image url('../img/content/footer-branding-mobile.png')
 
 	.branding_title
 		font-size 30px

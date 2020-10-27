@@ -1,10 +1,12 @@
+#form-cta
 secton.form1-wrap
 	.container
 		.form1
 			.form-1-fields
 				h2.form-title(data-aos="fade-right" data-aos-duration='500') Оставьте контакты и получите <span>бесплатный анализ вашего продукта</span>
-				form(action="")
-					input(type="text" placeholder="Имя")
-					input(type="tel" placeholder="Номер телефона")
+				form
+					input(name="formname" value='Бесплатный анализ продукта, форма с кнопки из первого экрана').g-form-name
+					input(type="text" placeholder="Имя" name="name")
+					input(type="tel" placeholder="Номер телефона" name="tel")
 					button(type="submit").btn Отправить
 			img(src="static/img/content/5-form/form.png", alt="").form1-img

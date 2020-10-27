@@ -1,4 +1,4 @@
-section.form2-wrap
+section.form2-wrap#footer-form
 	.container
 		.form2(data-aos="fade-up")
 			h2.form-title Чем дольше вы думаете, тем больше денег зарабатывают ваши конкуренты
@@ -8,8 +8,10 @@ section.form2-wrap
 					.phone-numbers
 						a.phone-russia(href="") +7 123 456 27 23
 						a.phone-belarus(href="") +375 123 456 27 23
-				form(action="")
+				form
+					input(name="formname" value='Нижняя форма').g-form-name
 					input.g-input(
+						name="tel"
 						type="tel"
 						placeholder="Оставьте номер телефона"
 						required)

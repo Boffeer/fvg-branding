@@ -16,7 +16,7 @@ mixin serviceInfo(title, subtitle, text, f)
 		h3.services-item__title= title
 		h4.services-item__subitile= subtitle
 		p.services-item__text= text
-		button.btn.services-item__btn Узнать стоимость
+		button(data-service= title).btn.services-item__btn Узнать стоимость
 
 
 //cases
@@ -127,8 +127,10 @@ mixin caseItemOpen(info)
 						.phone-numbers
 							a.phone-russia(href="") +7 123 456 27 23
 							a.phone-belarus(href="") +375 123 456 27 23
-					form(action="")
+					form
+						input(name="formname" value='Открытый кейс').g-form-name
 						input.g-input(
+							name="tel"
 							type="tel"
 							placeholder="Оставьте номер телефона"
 							required)

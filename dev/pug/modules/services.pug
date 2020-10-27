@@ -4,6 +4,7 @@ section.services-wrap#services
 			button(type="button").modal_close-btn ×
 			h3.services-modal_title Узнайте стоимость
 				span.services-modal_service-name
+			input(name="formname" value='').g-form-name
 			input.services-modal_input.g-input(
 				name="name",
 				type="text"
@@ -28,7 +29,7 @@ section.services-wrap#services
 						h3.services-item__title Social Media Marketing
 						h4.services-item__subitile Комплексное продвижение в VK, Facebook, Instagram, Одноклассники, Telegram, YouTube
 						p.services-item__text Мы используем все доступные инструменты для получения клиентов и создания бренда через социальные сети
-						button.btn.services-item__btn Узнать стоимость
+						button(data-service="SMM").btn.services-item__btn Узнать стоимость
 					ul.services-item-bullets
 						+bullet('1/target', 'Таргетированная реклама', '1', '1','500')
 						+bullet('1/design', 'Продающий дизайн', '1', '2', '700')
@@ -41,7 +42,7 @@ section.services-wrap#services
 
 						+bullet('1/adv', 'Реклама в наших интернет-сообществах', '1', '8', '1800')
 
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="SMM") Узнать стоимость
 
 			li.services-item.services--web
 				.container.services-container
@@ -54,7 +55,7 @@ section.services-wrap#services
 						+bullet('2/adv', 'Промо сайт', '2', '4', '1000')
 						+bullet('2/landing', 'Одностраничник', '2', '5', '1100')
 						+bullet('2/corp', 'Корпоративный сайт', '2', '6', '1200')
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="website") Узнать стоимость
 
 			li.services-item.services--design
 				.container.services-container
@@ -69,7 +70,7 @@ section.services-wrap#services
 
 						+bullet('3/4', 'Оформление социальных сетей и сайтов', '3', '4', '900')
 						+bullet('3/5', 'Дизайн наружной и интерьерной рекламы', '3', '5', '1000')
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="design") Узнать стоимость
 
 			li.services-item.services--seo
 				.container.services-container
@@ -83,7 +84,7 @@ section.services-wrap#services
 						+bullet('4-seo/3', 'Контекстная реклама в Яндекс Директ и Google Adwords', '4-seo', '3', '900')
 
 						+bullet('4-seo/4', 'SEO оптимизация', '4-seo', '4', '1100')
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="seo") Узнать стоимость
 
 			li.services-item.services--support
 				.container.services-container
@@ -103,15 +104,15 @@ section.services-wrap#services
 						+bullet('5-support/7', 'Настройка таргет. релкамы', '5-support', '7')
 						+bullet('5-support/8', 'Настройка контекстной рекламы', '5-support', '8')
 						+bullet('5-support/9', 'Написание всех видов текстов', '5-support', '9')
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="support") Узнать стоимость
 
 			li.services-item.services--world
 				.container.services-container
 					.services-item-info(data-aos="fade-left" data-aos-duration='500')
 						h3.services-item__title World marketing
 						h4.services-item__subitile Продвижение товаров и услуг на мировых торговых площадках: Amazon, Avito, eBay, Alibaba и др.
-						p.services-item__text Перспективы масштабировать бизнес далеко за пределами своей страны теперь реален и доступен каждому. <a href="#">Владислав Фадеев</a> и его команда не просто продвинут ваш товар/услугу на мировом рынке, а ещё автоматизируют процессы продаж, приведут платежеспособных клиентов и окажут техническую поддержку в любое время суток
-						button.btn.services-item__btn Узнать стоимость
+						p.services-item__text Перспективы масштабировать бизнес далеко за пределами своей страны теперь реален и доступен каждому. <a href="http://world.fadeevgroup.com">Владислав Фадеев</a> и его команда не просто продвинут ваш товар/услугу на мировом рынке, а ещё автоматизируют процессы продаж, приведут платежеспособных клиентов и окажут техническую поддержку в любое время суток
+						button.btn.services-item__btn(data-service="world-marketing") Узнать стоимость
 
 					ul.services-item-bullets
 						+bullet('6--world/1', 'Создание и продвижение магазинов на торговых площадках под ключ', '6--world', '1', '500')
@@ -123,7 +124,7 @@ section.services-wrap#services
 						li.services-item__bullet(data-aos="fade-up" data-aos-duration='1300')
 							img(src="static/img/content/4-services/6--world/5.png", alt="Помощь в покупке и доставке товаров").services-item__bullet-icon
 							p.services-item__bullet-text
-								a(href="#") Помощь в покупке и доставке товаров
+								a(href="http://delivery.fadeevgroup.com") Помощь в покупке и доставке товаров
 							img.services-item__bullet-bg(src="static/img/content/4-services/6--world/bg/5.png", alt="bg")
 						+bullet('6--world/6', 'Тех. поддержка онлайн-магазинов', '6--world', '6')
-					button.btn.services-item__btn.mobile-btn Узнать стоимость
+					button.btn.services-item__btn.mobile-btn(data-service="world-marketing") Узнать стоимость

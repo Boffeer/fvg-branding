@@ -15,7 +15,7 @@ section.hero
 					span Fadeev-group
 				img(src="static/img/general/fvg-big-logo.svg" alt="fvg").hero-logo
 				p.descriptor Ваша узнаваемость и количество клиентов на нашей совести
-				a(href="").btn.hero-btn Получить клиентов
+				a(href="#form-cta").btn.hero-btn Получить клиентов
 
 				.hero-socials
 					a(href="")
@@ -29,12 +29,18 @@ section.hero
 					a(href="")
 						img(src="static/img/general/wa.svg", alt="").hero-socials_icon
 
-
+.pop-success_wrap
+	.modal-inner
+		.hero-modal.hero-callback
+			p Данные отправлены, скоро с вами свяжемся
 .hero-modal_wrap
-	form.hero-modal(action="")
+	form.hero-callback.hero-modal
 		button(type="button").modal_close-btn ×
 		h3 Оставьте номер телефона<br>и мы вам перезвоним
+		input(name="formname" value='callback').g-form-name
 		input(
+			type="tel"
+			name='tel'
 			placeholder="Телефон"
 			required).g-input
 		button.btn Заказать
@@ -79,6 +85,6 @@ section.hero
 
 				nav.menu_nav
 					a.menu_nav-item.anchor(href="#services") Услуги
-					button.menu_nav-item.hero_callback Закзать услуги
+					button.menu_nav-item.hero_callback Заказать услуги
 					a.menu_nav-item.anchor(href="#cases") Кейсы
 					a.menu_nav-item.anchor(href="#work") Как мы рабоатем

@@ -91,6 +91,8 @@ $(document).ready(function () {
   AOS.init();
 
   $('.services-item__btn').click(function(){
+    var service = $(this).data('service')
+    $('.g-form-name').val(service).change();
     $('.services-modal_wrap').css({'display': 'flex'})
   })
 
@@ -105,6 +107,7 @@ $(document).ready(function () {
   })
 
   $('.hero_callback').click(function(){
+    $('.g-form-name').val('Перезвонить с главной').change()
     $('.hero-modal_wrap').css({'display': 'flex'})
   })
 
@@ -146,4 +149,26 @@ $(document).ready(function () {
 
 
 // --- End Ready
+});
+
+
+jQuery(document).ready(function ($) {
+
+  $("form").submit(function () {
+    var str = $(this).serialize();
+    $('.hero-modal_wrap').fadeOut()
+    $('.services-modal_wrap').fadeOut()
+    $.ajax({
+      type: "POST",
+      url: "static/php/contact.php",
+      data: str,
+      success: function ()
+      {
+          $('.pop-success_wrap').fadeIn()
+          setTimeout(function(){$('.pop-success_wrap').fadeOut()}, 1000)
+      }
+    }
+    );
+    return false;
+  });
 });
