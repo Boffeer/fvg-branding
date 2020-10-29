@@ -5,9 +5,9 @@
 	font-weight 900
 	text-align center
 
-@media (max-width 375px)
+@media (max-width 480px)
 	.section-title
-		font-size 45px
+		font-size 43px
 		letter-spacing 0 !important
 		margin-bottom 0
 
@@ -111,8 +111,8 @@
 	&:after
 		content: attr(data-shadow);
 		position: absolute;
-		top: 10px;
-		left: 15px;
+		top: 2px;
+		left: 14px;
 		right 0;
 		z-index: 0;
 		text-shadow: none;
@@ -163,4 +163,14 @@
 @keyframes shad-anim {
 	0% {background-position: 0 0}
 	0% {background-position: 100% -100%}
+	}
+
+@media (max-width 480px)
+	.principles-item--1 .principles-item__pic,
+	.principles-item--2 .principles-item__pic
+		transform scale(1.4)
+	.principles-item--5 .principles-item__pic
+		transform scale(1.4)
+	.founder .section-title{
+		font-size: 42 !important;
 	}

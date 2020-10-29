@@ -7,6 +7,55 @@ $(document).ready(function () {
   });
     svg4everybody({});
 
+
+
+
+
+
+
+
+    $('.hero-slider').slick({
+    	centerMode: true,
+		// centerPadding: '144px',
+    	slidesToShow: 1,
+        slidesToScroll: 1,
+    	infinite: true,
+    	dots: true,
+    	arrows: true,
+        swipeToSlide: true,
+    	nextArrow: '<svg class="slick-next" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.78" d="M28.2844 3L56.5687 31.2843L28.2844 59.5685" stroke="white" stroke-width="8"/></svg>',
+	    prevArrow: '<svg class="slick-prev" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.2843 3L6.00003 31.2843L34.2843 59.5685" stroke="white" stroke-width="8"/></svg>',
+        responsive:[{
+            breakpoint: 480,
+            settings: {
+                centerMode: false,
+                arrows: false
+            },
+        }],
+    })
+
+
+    $('.hero--branding').click(function(){
+		window.location.href='http://branding.fadeevgroup.com'
+    })
+
+    $('.hero--world').click(function(){
+		window.location.href='http://world.fadeevgroup.com'
+    })
+
+    $('.hero--delivery').click(function(){
+		window.location.href='http://delivery.fadeevgroup.com'
+    })
+
+
+
+
+
+
+
+
+
+
   $('.cases-slider').slick({
     // mobileFirst: true,
     slidesToShow: 2,
