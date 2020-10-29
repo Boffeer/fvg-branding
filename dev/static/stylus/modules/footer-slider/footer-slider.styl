@@ -489,16 +489,21 @@ footer
 .footer_link
 	color #fff
 	opacity 0.8
-	font-size 16px
-	margin-bottom 5px
+	font-size 14px
+	margin-bottom 10px
+	font-weight 400
 	trans()
 .footer_link:hover
 	color c-prim
 	trans()
-
-
-.footer-links
+.footer-socials-icons
 	display flex
+	justify-content space-around
+.footer-links{
+	display flex
+	justify-content: space-between;
+	flex-basis: 38px;
+}
 .footer-links-1
 	display flex
 	flex-direction column
@@ -535,9 +540,7 @@ footer
 		align-items center
 		text-align center
 		margin-bottom 26px
+	
+	.footer-socials-icons
+		width 100%
 
-
-.footer-socilas svg
-	margin-right 16px
-.footer-socilas svg:last-child
-	margin-right 0
