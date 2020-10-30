@@ -111,6 +111,7 @@ $(document).ready(function () {
     // centerPadding: '60px',
     slidesToShow: 3,
     dots: true,
+	arrows: false,
     infinite: false,
     // mobileFirst:true,
     responsive: [
