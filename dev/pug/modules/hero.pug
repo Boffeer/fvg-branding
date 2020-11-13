@@ -1,10 +1,10 @@
-section.hero
+section.hero#hero
 	.container
 		.hero-content
 			header.header
 				.phone-numbers
-					a.phone-russia(href="") +7 000 000 00 00
-					a.phone-belarus(href="") +375 00 000 00 00
+					a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
+					a.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
 				button.btn-secondary.hero_callback Заказать звонок
 				button.burger
 					span
@@ -14,77 +14,127 @@ section.hero
 				h1.headliner Брендинговое агентство
 					span Fadeev-group
 				img(src="static/img/general/fvg-big-logo.svg" alt="fvg").hero-logo
-				p.descriptor Ваша узнаваемость и количество клиентов на нашей совести
-				a(href="#form-cta").btn.hero-btn Получить клиентов
+				p.descriptor &mdash; Ваша узнаваемость и количество клиентов на нашей совести
+				button.btn.hero-btn.hero-cta Получить клиентов
 
 				.hero-socials
-					a(href="")
+					a(href="#{ig}")
 						img(src="static/img/general/ig.svg", alt="").hero-socials_icon
-					a(href="")
+					a(href="#{vk}")
 						img(src="static/img/general/vk.svg", alt="").hero-socials_icon
-					a(href="")
-						img(src="static/img/general/fb.svg", alt="").hero-socials_icon
-					a(href="")
+					a(href="#{fb}")
+						img(src="static/img/general/fb.svg", alt="").hero-socials_icon.hero-socials_icon--fb
+					a(href="#{tg}")
 						img(src="static/img/general/tg.svg", alt="").hero-socials_icon
-					a(href="")
+					a(href="#{wa}")
 						img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+					a(href="#{vi}")
+						img(src="static/img/general/viber.svg", alt="").hero-socials_icon
 
 .pop-success_wrap
 	.modal-inner
 		.hero-modal.hero-callback
 			p Данные отправлены, скоро с вами свяжемся
+
 .hero-modal_wrap
-	form.hero-callback.hero-modal
-		button(type="button").modal_close-btn ×
-		h3 Оставьте номер телефона<br>и мы вам перезвоним
-		input(name="formname" value='callback').g-form-name
-		input(
-			type="tel"
-			name='tel'
-			placeholder="Телефон"
-			required).g-input
-		button.btn Заказать
+	.hero-modal_inner
+		form.hero-callback.hero-modal
+			button(type="button").modal_close-btn ×
+			h3 Оставьте номер телефона<br>и мы вам перезвоним
+			input(name="formname" value='callback').g-form-name
+			input(
+				type="tel"
+				name='tel'
+				placeholder="Телефон"
+				required).g-input
+			button.btn.pop-btn Заказать звонок
+
+
+.hero-cta-modal_wrap
+	.hero-modal_inner
+		form.hero-callback.hero-modal
+			button(type="button").modal_close-btn ×
+			h3 Оставьте удобный контакт<br>и мы свяжемся с вами
+			input(name="formname" value='cta').g-form-name
+			input(
+				type="text"
+				name='name'
+				placeholder="Имя"
+				required).g-input
+			input(
+				type="text"
+				name='tel'
+				placeholder="Телефон или email"
+				required).g-input
+
+			button.btn.pop-btn Заказать
+
+			.cta-modal-socials
+				p.modal-text или свяжитесь с нами в любом удобном мессенджере
+
+				.hero-socials.hero-socials--pop
+					a(href="#{ig}").pop-socials
+						img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+					a(href="#{vk}").pop-socials
+						img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+					a(href="#{fb}").pop-socials
+						img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+					a(href="#{tg}").pop-socials
+						img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+					a(href="#{wa}").pop-socials
+						img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+					a(href="#{vi}").pop-socials
+						img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+
+
+
+
+
 
 .menu_wrap
 	.container
 		.menu
 			.menu_top
-				picture.menu-logo
-					source(
-						srcset='static/img/general/fvg-small-logo.svg'
-						media='(max-width: 200px)')
-					source(
-						srcset='static/img/general/fvg-small-logo.svg'
-						media='(max-width: 500px)')
-					source(
-						srcset='static/img/general/fvg-small-logo.svg'
-						media='(max-width: 800px)')
-					img.hero-menu-logo--inside(
-						src='static/img/general/fvg-big-logo.svg',
-						alt='')
+				a(href="#hero").menu-logo
+					picture.menu-logo
+						source(
+							srcset='static/img/general/fvg-small-logo.svg'
+							media='(max-width: 200px)')
+						source(
+							srcset='static/img/general/fvg-small-logo.svg'
+							media='(max-width: 500px)')
+						source(
+							srcset='static/img/general/fvg-small-logo.svg'
+							media='(max-width: 800px)')
+						img.hero-menu-logo--inside(
+							src='static/img/general/fvg-big-logo.svg',
+							alt='')
 				button.menu-burger_close
 					span.burger-close_left
 					span.burger-close_right
 			.menu_bottom
 				.menu_contacts
-					a.menu_item.phone-russia(href="") +7 000 000 00 00
-					a.menu_item.phone-belarus(href="") +375 00 000 00 00
-					a.menu_item.hero-menu_email(href="") hello@fadeevgroup.com
-					button.menu_item.btn-secondary.hero_callback Заказать звонок
 					.hero-socials
-						a(href="")
+						a(href="#{ig}")
 							img(src="static/img/general/ig.svg", alt="").hero-socials_icon
-						a(href="")
+						a(href="#{vk}")
 							img(src="static/img/general/vk.svg", alt="").hero-socials_icon
-						a(href="")
+						a(href="#{fb}")
 							img(src="static/img/general/fb.svg", alt="").hero-socials_icon
-						a(href="")
+						a(href="#{tg}")
 							img(src="static/img/general/tg.svg", alt="").hero-socials_icon
-						a(href="")
+						a(href="#{wa}")
 							img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+						a(href="#{vi}")
+							img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+					a.menu_item.hero-menu_email(href="#{email}") #{email}
+					a.menu_item.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
+					a.menu_item.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
+					button.menu_item.btn-secondary.hero_callback Заказать звонок
 
 				nav.menu_nav
-					a.menu_nav-item.anchor(href="#services") Услуги
-					button.menu_nav-item.hero_callback Заказать услуги
-					a.menu_nav-item.anchor(href="#cases") Кейсы
-					a.menu_nav-item.anchor(href="#work") Как мы работаем
+					a.menu_nav-item.anchor(href="#cases" data-shadow="Кейсы") Кейсы
+					a.menu_nav-item.anchor(href="#services" data-shadow="Услуги") Услуги
+					//- button.menu_nav-item.hero_callback(data-shadow="Заказать услуги") Заказать услуги
+					a.menu_nav-item.anchor.menu_nav-item--fvg(href="#fvg" data-shadow="Другие проекты") Другие проекты
+					a.menu_nav-item.anchor(href="#work" data-shadow="Как мы работаем") Как мы работаем

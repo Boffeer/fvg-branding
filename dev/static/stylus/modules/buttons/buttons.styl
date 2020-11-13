@@ -17,7 +17,7 @@
 	btn-red-shade()
 
 	&:hover
-		box-shadow: 0px -0.193708px 3.59743px rgba(211, 49, 49, 0.38), 0px -0.465507px 8.64513px rgba(211, 49, 49, 0.42), 0px -0.876509px 16.278px rgba(211, 49, 49, 0.35), 0px -1.56354px 29.0372px rgba(211, 49, 49, 0.37), 0px -2.92443px 54.3109px rgba(211, 49, 49, 0.41), 0px -7px 130px rgba(211, 49, 49, 0.5);
+		box-shadow: 0px -0.193708px 2.59743px rgba(211, 49, 49, 0.28), 0px -0.465507px 5.64513px rgba(211, 49, 49, 0.32), 0px -0.876509px 10.278px rgba(211, 49, 49, 0.25), 0px -1.56354px 19.0372px rgba(211, 49, 49, 0.22), 0px -2.92443px 34.3109px rgba(211, 49, 49, 0.41), 0px -7px 70px rgba(211, 49, 49, 0.5);
 		transition all 0.3s
 
 .btn-secondary
@@ -64,20 +64,30 @@
 	.services-item__btn
 		world-shade()
 
+.ext-link:after
+	content url(../img/general/link.svg)
+	position relative
+	top 3px
+	left 3px
+	right 3px
+.ext-link:hover
+	// text-shadow: 0px -8.60183px 159.748px #F8D646, 0px -3.59364px 66.739px #F8D646, 0px -1.92133px 35.6819px rgba(248, 214, 70, 0.61), 0px -1.07708px 20.003px rgba(248, 214, 70, 0.15), 0px -0.572031px 10.6234px rgba(248, 214, 70, 0.57), 0px -0.238035px 4.42064px rgba(248, 214, 70, 0.0843437);
+	filter: drop-shadow(1px 0px 6px #ffce00) drop-shadow(1px 0px 2px #ffce00)
+	
 
 .cases-item__btn
 	border 3px clr-prim solid
 	box-sizing border-box
 
 	background-color transparent
-	color clr-f--d
+	color #fff
 	box-shadow none
 
 	&:hover
 		background-color clr-prim
 		color clr-f
 		transition all 0.3s
-
+		box-shadow: none !important
 
 .slick-dots
 	bottom -50px !important
@@ -122,13 +132,15 @@
 
 .modal_close-btn
 	border-radius 50%
-	background-color #232323
+	// background-color #232323
+	background-color transparent
 	color #fff
 	border none
 	position absolute
 	right 20px
 	top 20px
 	font-weight 900
+	font-size 28px
 	padding 5px 8px
 
 

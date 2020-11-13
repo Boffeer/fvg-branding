@@ -5,12 +5,18 @@
 	font-weight 900
 	text-align center
 
+.services-modal_title
+	text-align center
+
 @media (max-width 480px)
 	.section-title
-		font-size 43px
+		padding-left 15px
+		padding-right 15px
+		font-size 40px
 		letter-spacing 0 !important
 		margin-bottom 0
-
+	.principles .section-title
+		font-size 39px
 .results-tiem__number
 	font-size f-minititle
 	font-weight 900
@@ -105,16 +111,18 @@
 	// display: inline-block;
 	// color: white;
 	// font-size: 7rem;
-	text-shadow: 4px 5px 0 clr-bg--l;
+	// text-shadow: 4px 5px 0 clr-bg--l;
+	text-shadow: 3px 3px 0 #000f40;
 	letter-spacing 10px
 	position relative
+	z-index 2
 	&:after
 		content: attr(data-shadow);
 		position: absolute;
-		top: 2px;
+		top: 6px;
 		left: 14px;
 		right 0;
-		z-index: 0;
+		z-index: -1;
 		text-shadow: none;
 		background-image:
 			linear-gradient(
@@ -130,20 +138,20 @@
 
 		animation: shad-anim 80s linear infinite;
 
-.work
-	.section-title:after
-		left 18px
+// .work
+// 	.section-title:after
+// 		left 18px
 
-.reviews
-	.section-title:after
-		left 15px
-		right 0
+// .reviews
+// 	.section-title:after
+// 		left 15px
+// 		right 0
 
-.factors
-	.section-title:after
-		left 15px
-		top 7px
-		z-index 1
+// .factors
+// 	.section-title:after
+// 		left 15px
+// 		top 7px
+// 		// z-index 1
 
 .founder
 	.section-title:after

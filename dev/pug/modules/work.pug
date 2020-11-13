@@ -9,7 +9,7 @@ section.work-wrap#work
 		.work-slider
 			.work-item.work-item--1
 				img(src="static/img/content/7-how/1.png", alt="work-icon").work-item__icon
-				p.work-item__text Вы <a href="#footer-form">оставляете заявку</a> или <a href="tel:+">звоните нам</a>
+				p.work-item__text Вы <button class="work_btn work_btn--cta" data-formname="Как мы рабоатем">оставляете заявку</button> или <button class="work_btn work_btn--contacts">звоните нам</button>
 			.work-item.work-item--2
 				img(src="static/img/content/7-how/2.png", alt="work-icon").work-item__icon
 				p.work-item__text Мы детально обсуждаем ваш проект
@@ -30,3 +30,20 @@ section.work-wrap#work
 			.work-item.work-item--7
 				img(src="static/img/content/7-how/7.png", alt="work-icon").work-item__icon
 				p.work-item__text Вы принимаете выполненный проект
+
+.modal-contacts_wrap
+	.modal-inner
+		.hero-modal
+			button(type="button").modal_close-btn ×
+			a.modal-contants_item(href="tel:#{byPhoneLnk}") #{byPhone}
+			a.modal-contants_item(href="tel:#{ruPhoneLnk}") #{ruPhone}
+			a.modal-contants_item(href="mailto:#{email}") #{email}
+			+socials({ 'class': 'footer-socials-icons',
+				'inst': 'https://instagram.com',
+				'vk': 'https://vk.com',
+				'fb': 'https://facebook.com',
+				'tg': 'https://telegram.org',
+				'whats': 'https://whatsapp.com',	
+				'vi': 'https://viber.com'
+			})
+

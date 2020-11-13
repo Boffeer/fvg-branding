@@ -2,7 +2,7 @@ section.services-wrap#services
 	.services-modal_wrap
 		form.services-modal
 			button(type="button").modal_close-btn ×
-			h3.services-modal_title Узнайте стоимость
+			h3.services-modal_title Оставьте контакты и мы вам перезвоним 
 				span.services-modal_service-name
 			input(name="formname" value='').g-form-name
 			input.services-modal_input.g-input(
@@ -40,7 +40,13 @@ section.services-wrap#services
 						+bullet('1/game', 'Геймификация', '1', '6', '1300')
 						+bullet('1/fire', 'Рекламы у лидеров мнений', '1', '7', '1400')
 
-						+bullet('1/adv', 'Реклама в наших интернет-сообществах', '1', '8', '1800')
+
+						li.services-item__bullet(data-aos="fade-up" data-aos-duration='1800')
+							img(src="static/img/content/4-services/1/adv.png", alt="Реклама в наших интернет-сообществах").services-item__bullet-icon
+							p.services-item__bullet-text Реклама в наших
+								a(href="${fvgSoicals}").ext-link  интернет-сообществах
+							img.services-item__bullet-bg(src="static/img/content/4-services/1/bg/8.png", alt="bg")
+						//- +bullet('1/adv', 'Реклама в наших интернет-сообществах', '1', '8', '1800')
 
 					button.btn.services-item__btn.mobile-btn(data-service="SMM") Узнать стоимость
 
@@ -111,7 +117,7 @@ section.services-wrap#services
 					.services-item-info(data-aos="fade-left" data-aos-duration='500')
 						h3.services-item__title World marketing
 						h4.services-item__subitile Продвижение товаров и услуг на мировых торговых площадках: Amazon, Avito, eBay, Alibaba и др.
-						p.services-item__text Перспективы масштабировать бизнес далеко за пределами своей страны теперь реален и доступен каждому. <a href="http://world.fadeevgroup.com">Владислав Фадеев</a> и его команда не просто продвинут ваш товар/услугу на мировом рынке, а ещё автоматизируют процессы продаж, приведут платежеспособных клиентов и окажут техническую поддержку в любое время суток.
+						p.services-item__text Перспективы масштабировать бизнес далеко за пределами своей страны теперь реален и доступен каждому. <a class="ext-link" href="http://world.fadeevgroup.com">Владислав Фадеев</a> и его команда не просто продвинут ва товар/услугу на мировом рынке, а ещё автоматизируют процессы продаж, приведут платежеспособных клиентов и окажут техническую поддержку в любое время суток.
 						button.btn.services-item__btn(data-service="world-marketing") Узнать стоимость
 
 					ul.services-item-bullets
@@ -124,7 +130,7 @@ section.services-wrap#services
 						li.services-item__bullet(data-aos="fade-up" data-aos-duration='1300')
 							img(src="static/img/content/4-services/6--world/5.png", alt="Помощь в покупке и доставке товаров").services-item__bullet-icon
 							p.services-item__bullet-text
-								a(href="http://delivery.fadeevgroup.com") Помощь в покупке и доставке товаров
+								a(href="http://delivery.fadeevgroup.com").ext-link Помощь в покупке и доставке товаров
 							img.services-item__bullet-bg(src="static/img/content/4-services/6--world/bg/5.png", alt="bg")
 						+bullet('6--world/6', 'Тех. поддержка онлайн-магазинов', '6--world', '6')
 					button.btn.services-item__btn.mobile-btn(data-service="world-marketing") Узнать стоимость

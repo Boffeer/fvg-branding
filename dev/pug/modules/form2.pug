@@ -6,18 +6,19 @@ section.form2-wrap#footer-form
 				.form2-call
 					p.form2-cta Позвоните нам
 					.phone-numbers
-						a.phone-russia(href="") +7 123 456 27 23
-						a.phone-belarus(href="") +375 123 456 27 23
+						a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
+						a.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
 				form
 					input(name="formname" value='Нижняя форма').g-form-name
 					input.g-input(
 						name="tel"
 						type="tel"
-						placeholder="Оставьте номер телефона"
+						placeholder="Телефон или email"
 						required)
 					input.btn(
 						type="submit"
 						value="Отправить").btn
-					p.gdpr-caption Нажимая кнопку «Отправить», я даю согласие на передачу персональных данных согласно политике конфиденциальности
+					p.gdpr-caption Нажимая кнопку «Отправить», я даю согласие на передачу персональных данных согласно
+						a(href="#{policy}")  политике конфиденциальности.
 
 	img(src="static/img/content/11-form-2/time.png", alt="")

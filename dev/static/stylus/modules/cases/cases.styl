@@ -11,7 +11,7 @@
 	right 32%
 .cases
 	display block
-	padding 80px 0 150px
+	padding 80px 0 220px
 	&-slider
 		margin-bottom 90px
 	span
@@ -78,7 +78,11 @@
 
 		&__text
 			margin-bottom s1
+	
 
+.cases .slick-dots {
+    bottom: -90px !important;
+}
 
 @media (max-width 480px)
 	.cases_guy
@@ -89,10 +93,13 @@
 		top 0rem
 .cases
 	.cases-item
+		background-color #000c33
 		padding 32px 65px
 		margin-right 26px
 		min-width 320px
+		color #fff
 // open
+
 .case-modal_wrap
 	position fixed
 	top 0
@@ -106,7 +113,8 @@
 	z-index 1000
 
 
-
+.case-modal_pic
+	max-width 600px
 .case-modal
 	background-color clr-bg--d
 	max-width 1260px
@@ -125,8 +133,11 @@
 
 .case-modal_hero
 	display flex
+	justify-content space-between
 	align-items center
-	min-height 60vh
+	min-height 50vh
+	// margin-bottom 60px
+	align-items flex-start
 .case-modal-headliner
 	max-width 50%
 .case-modal_headliner
