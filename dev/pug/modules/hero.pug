@@ -1,7 +1,12 @@
+.preloader
+	img(src='static/img/general/fvg-small-logo.svg').preloader_logo
+	img(src="static/img/general/loader.svg").preloader_loader
+
+
 section.hero#hero
 	.container
 		.hero-content
-			header.header
+			header.header(data-aos="fade-down" data-aos-duration="500")
 				.phone-numbers
 					a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
 					a.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
@@ -11,25 +16,31 @@ section.hero#hero
 					span
 					span
 			.offer
-				h1.headliner Брендинговое агентство
+				h1.headliner(data-aos="fade-left" data-aos-duration="500") Брендинговое агентство
 					span Fadeev-group
-				img(src="static/img/general/fvg-big-logo.svg" alt="fvg").hero-logo
-				p.descriptor &mdash; Ваша узнаваемость и количество клиентов на нашей совести
-				button.btn.hero-btn.hero-cta Получить клиентов
+				img(src="static/img/general/fvg-big-logo.svg" alt="fvg")(data-aos="fade-left" data-aos-duration="500").hero-logo
+				p.descriptor(data-aos="fade-left" data-aos-duration="500") &mdash; Ваша узнаваемость и количество клиентов на нашей совести
+				button.btn.hero-btn.hero-cta(data-aos="fade-left" data-aos-duration="500") Получить клиентов
 
-				.hero-socials
+				.hero-socials(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
 					a(href="#{ig}")
-						img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+						+igIcon()
 					a(href="#{vk}")
-						img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+						+vkIcon()
 					a(href="#{fb}")
-						img(src="static/img/general/fb.svg", alt="").hero-socials_icon.hero-socials_icon--fb
+						//- img(src="static/img/general/fb.svg", alt="").hero-socials_icon.hero-socials_icon--fb
+						+fbIcon()
 					a(href="#{tg}")
-						img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+						+tgIcon()
 					a(href="#{wa}")
-						img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+						+waIcon()
 					a(href="#{vi}")
-						img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+						+viberIcon()
 
 .pop-success_wrap
 	.modal-inner
@@ -74,17 +85,23 @@ section.hero#hero
 
 				.hero-socials.hero-socials--pop
 					a(href="#{ig}").pop-socials
-						img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+						+igIcon()
 					a(href="#{vk}").pop-socials
-						img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+						+vkIcon()
 					a(href="#{fb}").pop-socials
-						img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+						+fbIcon()
 					a(href="#{tg}").pop-socials
-						img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+						+tgIcon()
 					a(href="#{wa}").pop-socials
-						img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+						+waIcon()
 					a(href="#{vi}").pop-socials
-						img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+						//- img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+						+viberIcon()
 
 
 
@@ -116,17 +133,23 @@ section.hero#hero
 				.menu_contacts
 					.hero-socials
 						a(href="#{ig}")
-							img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/ig.svg", alt="").hero-socials_icon
+							+igIcon()
 						a(href="#{vk}")
-							img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/vk.svg", alt="").hero-socials_icon
+							+vkIcon()
 						a(href="#{fb}")
-							img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/fb.svg", alt="").hero-socials_icon
+							+fbIcon()
 						a(href="#{tg}")
-							img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/tg.svg", alt="").hero-socials_icon
+							+tgIcon()
 						a(href="#{wa}")
-							img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/wa.svg", alt="").hero-socials_icon
+							+waIcon()
 						a(href="#{vi}")
-							img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+							//- img(src="static/img/general/viber.svg", alt="").hero-socials_icon
+							+viberIcon()
 					a.menu_item.hero-menu_email(href="#{email}") #{email}
 					a.menu_item.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
 					a.menu_item.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}

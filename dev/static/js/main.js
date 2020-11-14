@@ -10,6 +10,7 @@ $(document).ready(function () {
 
 
 
+  $('.hero').css({'opacity':'1'});
 
 
 
@@ -216,7 +217,33 @@ window.addEventListener('scroll', function() {
   $('.burger').click(function(){
     $('.menu_wrap').slideToggle()
     $('html').addClass('modal-open');
+    
+
+    for (let i = 0; i < 5; i++){
+      setTimeout(function(){
+        // $('.menu_nav .menu_nav-item:nth-child('+i+')').css({'color':'#000'})
+        $('.menu_nav .menu_nav-item:nth-child('+i+')').addClass('js-menu_nav-item--opened');
+      }, (350 * i));
+
+      setTimeout(function(){
+        $('.menu_nav .menu_nav-item:nth-child('+i+')').removeClass('js-menu_nav-item--opened');
+      }, (350 * 1.5 * i));
+
+
+
+      // setInterval(function(){
+      //   $('.menu_nav .menu_nav-item:nth-child('+i+')').css({'color':'#fff'})
+      // }, 100)
+    }
   })
+
+
+
+
+
+
+
+
 
   $('.cases-item__btn').click(function(){
     var thisCase = $(this).data('case-number')
@@ -307,6 +334,19 @@ $(document).mouseup(function (e){
 
 
 
+let heroClasses = [".header", ".headliner", ".hero-logo", ".descriptor", ".hero-btn", ".hero-socials"];
+
+heroClasses.forEach(function(item, i, arr) {
+  $(item).removeClass('aos-animate');
+})
+
+
+setTimeout(function() {
+  $(".preloader").fadeOut();
+  heroClasses.forEach(function(item, i, arr) {
+    $(item).addClass('aos-animate');
+  })
+}, 200)
 
 
 
@@ -333,4 +373,5 @@ jQuery(document).ready(function ($) {
     );
     return false;
   });
+
 });

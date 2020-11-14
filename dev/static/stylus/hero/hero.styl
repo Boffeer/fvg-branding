@@ -1,3 +1,39 @@
+
+@keyframes loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.preloader
+	width 100vw
+	height 100vh
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left 0
+	background-color clr-bg--l
+	z-index 100000
+.preloader_logo
+.preloader_loader
+	position absolute
+	top 0
+	right 0
+	left 0
+	bottom 0
+	margin auto
+.preloader_loader
+	animation: loader-rotate 2s infinite ease-in-out;
+
+
+	
+
+
+
+
+
+
+
 // .pop
 
 
@@ -7,6 +43,7 @@
 .hero
 	height 120vh
 	background-image url('../img/content/1-hero/hero-bg.png')
+	// background-color clr-bg--d
 	background-size cover
 	background-repeat no-repeat
 	background-position 40%
@@ -121,7 +158,8 @@
 .burger
 	position fixed
 	top 38px
-	right 14vw
+	right 38px
+	// right 14vw
 	z-index 30
 	transition all 0.3s linear
 
@@ -146,7 +184,8 @@
 			transiton all 0.3s transparent
 
 
-	
+.hero-modal_inner .g-input
+	width 280px
 .phone-belarus
 	margin-bottom 15px
 .offer
@@ -154,12 +193,13 @@
 	flex-direction column
 	justify-content space-evenly
 	align-items center
-	height: 700px;
+	height: 500px;
 .headliner
 	font-size 36px
 	font-weight 900
 	line-height 1.2
 	text-align center
+	margin-bottom 10px
 	span
 		display none
 .descriptor
@@ -167,7 +207,7 @@
 	font-weight 400
 	line-height 1.7
 	text-align center
-	margin-bottom 26px
+	// margin-bottom 26px
 	font-style italic
 .hero-btn
 	margin-bottom 68px
@@ -181,8 +221,8 @@
 	max-height 48px
 .hero-socials_icon--fb
 	margin 0 5px
-
-
+.hero-socials_icon:hover path
+	fill clr-second
 
 .menu_wrap
 	display none
@@ -200,7 +240,9 @@
 		content url('../img/content/0-burger/burger-guy.png')
 		position absolute
 		z-index 1
-		top 90px
+		top -190px
+		transform: scale(0.8);
+		left: -10vw;
 
 
 .menu_top
@@ -212,7 +254,9 @@
 .menu_top
 	padding-top 50px
 .menu-burger_close
-	position relative
+	position fixed
+	right 58px
+	top 38px
 	align-self flex-start
 .burger-close_left
 		position absolute
@@ -230,18 +274,29 @@
 	justify-content center
 	position relative
 	z-index 2
-	align-self center
-	padding-top 100px
+	align-self flex-start
+	margin-left 37px
+	height 72%
+	// padding-top 100px
 	.hero-socials
-		margin-bottom 13px
+		margin-bottom auto
 	.phone-belarus
 		margin-bottom 15px
+		font-size 20px
 	.hero-menu_email
 		margin-bottom 26px
+		font-size 20px
 		padding-left 0 !important
-	button
+	.hero-menu_email:before
+		content: url(../img/general/email.svg)
+		display block
+		height 24px
+		width 24px
+	.phone-russia
 		margin-bottom 26px
-		// margin-left 50px
+		font-size 20px
+	.btn-secondary
+		align-self: flex-start;
 .menu_nav-item
 	font-family 'Montserrat'
 	transition all 0.3s 
@@ -263,7 +318,7 @@
 	flex-direction column
 	align-items flex-end
 	&-item
-		font-size 50px
+		font-size 60px
 		font-weight 900
 		color clr-f
 		line-height 1.5
@@ -311,6 +366,62 @@ button.menu_nav-item:hover:after{
 }
 
 
+
+
+.js-menu_nav-item--opened{
+	color clr-second
+	text-shadow: 3px 3px 0 #000f40;
+	letter-spacing 6px
+	position relative
+	transiton all 0.3s 
+	z-index 2
+	// transition all 0.3s
+}
+.js-menu_nav-item--opened:after{
+	// transition opacity 0.6s
+	
+	content: attr(data-shadow);
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width 120%
+	right 0;
+	z-index: -1;
+	text-shadow: none;
+	letter-spacing 6px
+	background-image:
+		linear-gradient(
+			45deg,
+			transparent 45%,
+			hsla(48,20%,90%,1) 45%,
+			hsla(48,20%,90%,1) 55%,
+			transparent 0
+			);
+	background-size: 6px 6px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	animation: shad-anim 80s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-cta-modal_wrap input
 	margin-bottom: 24px;
 .cta-modal-socials
@@ -325,10 +436,13 @@ button.menu_nav-item:hover:after{
 
 
 .burger--scrolled
-	right 38px
+	// right 38px
 	transition all 0.3s linear
 	opacity 0.6
 	position fixed
+
+.burger.burger--scrolled
+	transform scale(0.8)
 
 @media (max-width 480px)
 	.menu_wrap:before
@@ -400,16 +514,41 @@ button.menu_nav-item:hover:after{
 
 @media (min-width: 1400px)
 	.header
-		margin-bottom 60px
+		margin-bottom 140px
 		justify-content flex-start
 	.phone-numbers
-		margin-right 60px
+		margin-right 68px
 	.hero
-		background-position 52%
+		opacity 0
+		background-position 38%
+		// background-position 300%
+		transition all 2s ease
 		.container
 			width 1440px
+			margin-left auto
+			margin-right 40px
 	.offer
 		width 506px
 		margin: 0 auto 0 60px;
+	.hero-btn
+		margin-bottom 128px
+	.descriptor
+		margin-bottom 20px
 	// .burger
 	// 	right 20vw
+@media (min-width: 1400px) and (max-width: 1600px)
+	.hero
+		background-image url(../img/content/1-hero/hero-bg-mac.png)
+	.menu_wrap
+		background-position-x: 35%;
+		background-position-y: -30px;
+
+
+@media (max-width 1400px)
+	.header
+		margin-bottom 30px
+		.btn-secondary
+			margin-right 60px
+	.offer
+		max-width 530px
+		height 500px
