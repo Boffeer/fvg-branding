@@ -4,7 +4,7 @@
 @import 'libs.styl'
 
 html
-	font-size f-regular
+	font-size 'Montserrat'
 	// width 100%
 	// height 100%
 	overflow-x hidden
@@ -20,6 +20,7 @@ body
 	// color clr-f
 .modal-open
 	overflow-y hidden
+	
 h1,h2,h3,h4,h5,h6
 	margin 0
 
@@ -70,13 +71,15 @@ button
 	display flex
 	flex-direction column
 	height 100%
-
+	margin-bottom: -10px;
+	overflow-x hidden
 .content
 	flex 1 0 auto
 
 .container
 	max-width 1260px
 	margin 0 auto
+	// padding 0 15px
 	// overflow-x hidden
 	// overflow-x hidden
 
@@ -95,6 +98,8 @@ button
 		max-width 95% !important
 		width 95% !important
 		// overflow-x hidden !importan
+	.wrapper
+		overflow-x hidden
 
 
 //Модули
