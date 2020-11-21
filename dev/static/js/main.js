@@ -271,6 +271,7 @@ let slidersList = [".cases-slider", ".work-slider", "footer-slider"];
     $('.hero-modal_wrap').fadeOut();
     $('.hero-cta-modal_wrap').fadeOut();
     $('.modal-contacts_wrap').fadeOut();
+    $('.hero-callback-modal_wrap').fadeOut();
     $('html').removeClass('modal-open');
 
     if ($('.case-modal').hasClass('js-zoomer')){
@@ -288,10 +289,13 @@ let slidersList = [".cases-slider", ".work-slider", "footer-slider"];
 
   $('.hero_callback').click(function(){
     $('.g-form-name').val('Перезвонить с главной').change()
-    $('.hero-cta-modal_wrap').fadeIn();
+    $('.hero-callback-modal_wrap').fadeIn();
     // $('.hero-modal_wrap').fadeIn();
     $('html').addClass('modal-open');
   })
+
+
+
 
   $('.menu-burger_close').click(function(){
     $('.menu_wrap').slideToggle()
@@ -313,7 +317,7 @@ let slidersList = [".cases-slider", ".work-slider", "footer-slider"];
     $('html').addClass('modal-open');
     
     let j = 1.5;
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < 5; i++){
       i == 4 ? j = 1.3 : j = 1.5
       setTimeout(function(){
         $('.menu_nav .menu_nav-item:nth-child('+i+')').addClass('js-menu_nav-item--opened');
@@ -418,22 +422,31 @@ $(document).mouseup(function (e){
   $('html').removeClass('modal-open');  
 });
 
+$(document).mouseup(function (e){
+  var modalctr = $(".hero-callback-modal_wrap");
+  var modal = $(".hero-modal");
+  if (!modal.is(e.target) && modal.has(e.target).length === 0){
+    modalctr.fadeOut();
+  }
+  $('html').removeClass('modal-open');  
+});
 
 
 
-let heroClasses = [".header", ".headliner", ".hero-logo", ".descriptor", ".hero-btn", ".hero-socials"];
 
-heroClasses.forEach(function(item, i, arr) {
-  $(item).removeClass('aos-animate');
-})
+// let heroClasses = [".header", ".headliner", ".hero-logo", ".descriptor", ".hero-btn", ".hero-socials"];
+
+// heroClasses.forEach(function(item, i, arr) {
+//   $(item).removeClass('aos-animate');
+// })
 
 
-setTimeout(function() {
-  $(".preloader").fadeOut();
-  heroClasses.forEach(function(item, i, arr) {
-    $(item).addClass('aos-animate');
-  })
-}, 200)
+// setTimeout(function() {
+//   $(".preloader").fadeOut();
+//   heroClasses.forEach(function(item, i, arr) {
+//     $(item).addClass('aos-animate');
+//   })
+// }, 200)
 
 
 
@@ -451,10 +464,22 @@ jQuery(document).ready(function ($) {
       type: "POST",
       url: "static/php/contact.php",
       data: str,
+      beforeSend: function() {
+        // $('form button').attr("disabled");
+        // $('form button').attr("disabled")
+        // $('form button').text('Отправка данных')
+        $('form button').css({"opacity": "0.6"})
+      },
       success: function ()
       {
-          $('.pop-success_wrap').fadeIn()
+        $('.pop-success_wrap').fadeIn();
           setTimeout(function(){$('.pop-success_wrap').fadeOut()}, 1000)
+        // $('form button').text('Данные отправены!')
+        $('form button').css({"opacity": "1"});
+        // setTimeout(function(){
+          // $('form button').text('Отправить')
+        // },10000)
+        
       }
     }
     );

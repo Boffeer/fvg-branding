@@ -1,11 +1,12 @@
-.preloader
-	img(src='static/img/general/fvg-small-logo.svg').preloader_logo
-	img(src="static/img/general/loader.svg").preloader_loader
+//- .preloader
+//- 	img(src='static/img/general/fvg-small-logo.svg').preloader_logo
+//- 	img(src="static/img/general/loader.svg").preloader_loader
 
 
 section.hero#hero
 	.container
 		.hero-content
+			//- header.header
 			header.header(data-aos="fade-down" data-aos-duration="500")
 				.phone-numbers
 					a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
@@ -15,14 +16,19 @@ section.hero#hero
 				span
 				span
 				span
-			.offer
-				h1.headliner(data-aos="fade-left" data-aos-duration="500") Брендинговое агентство
+			//- img(src="static/img/general/fvg-big-logo.svg" alt="fvg").hero-logo--aside
+			.offer(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
+				//- h1.headliner(data-aos="fade-left" data-aos-duration="500") Брендинговое агентство
+				h1.headliner Брендинговое агентство
 					span Fadeev-group
-				img(src="static/img/general/fvg-big-logo.svg" alt="fvg" data-aos="fade-left" data-aos-duration="500").hero-logo
-				p.descriptor(data-aos="fade-left" data-aos-duration="500") Ваша узнаваемость и количество клиентов на нашей совести
-				button.btn.hero-btn.hero-cta(data-aos="fade-left" data-aos-duration="500") Получить клиентов
+				img(src="static/img/general/fvg-big-logo.svg" alt="fvg" data-aos="fade-left" data-aos-duration="500").hero-logo--mobile
+				p.descriptor Ваша узнаваемость и количество клиентов на нашей совести
+				button.btn.hero-btn.hero-cta Получить клиентов
+				//- p.descriptor(data-aos="fade-left" data-aos-duration="500") Ваша узнаваемость и количество клиентов на нашей совести
+				//- button.btn.hero-btn.hero-cta(data-aos="fade-left" data-aos-duration="500") Получить клиентов
 
-			.hero-socials(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
+			//- .hero-socials(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
+			.hero-socials
 				a(href="#{ig}")
 					+igIcon()
 				a(href="#{vk}")
@@ -59,6 +65,44 @@ section.hero#hero
 	.hero-modal_inner
 		form.hero-callback.hero-modal
 			button(type="button").modal_close-btn ×
+			h3 Хотите мы вам перезвоним?
+			p.modal-text Чтобы мы могли связаться с вами
+			input(name="formname" value='cta').g-form-name
+			input(
+				type="text"
+				name='name'
+				placeholder="Имя"
+				required).g-input
+			input(
+				type="text"
+				name='tel'
+				placeholder="Телефон или email"
+				required).g-input
+
+			button.btn.pop-btn Заказать звонок
+
+			p.modal-text Или свяжитесь с нами в любом удобном мессенджере
+
+			a.modal_phone(href="tel:#{byPhoneLnk}") #{byPhone}
+
+			.hero-socials.hero-socials--pop
+				a(href="#{ig}").pop-socials
+					+igIcon()
+				a(href="#{vk}").pop-socials
+					+vkIcon()
+				a(href="#{fb}").pop-socials
+					+fbIcon()
+				a(href="#{tg}").pop-socials
+					+tgIcon()
+				a(href="#{wa}").pop-socials
+					+waIcon()
+				a(href="#{vi}").pop-socials
+					+viberIcon()
+
+.hero-callback-modal_wrap
+	.hero-modal_inner
+		form.hero-callback.hero-modal
+			button(type="button").modal_close-btn ×
 			h3 Оставьте любые удобные контакты
 			p.modal-text Чтобы мы могли связаться с вами
 			input(name="formname" value='cta').g-form-name
@@ -73,7 +117,7 @@ section.hero#hero
 				placeholder="Телефон или email"
 				required).g-input
 
-			button.btn.pop-btn Заказать
+			button.btn.pop-btn Заказать звонок
 
 			p.modal-text Или свяжитесь с нами в любом удобном мессенджере
 

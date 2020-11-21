@@ -1,7 +1,7 @@
 .principles
 	padding-top 200px
 	.section-title
-		font-size 37px
+		font-size 60px
 	&-item
 		&-text
 			font-size 20px
@@ -110,8 +110,30 @@
 	top -21rem
 	left 10rem
 	z-index -1
+.principles-item-text
+	margin-left 15px
 
-@media (max-width 480px)
+@media (max-width 1000px)
+	.principles
+		.section-title
+			font-size 44px
+
+@media (max-width 1000px) and (min-width: 500px)
+	.principles-item-text
+		font-size 16px
+		margin-top 50px
+		margin-bottom 50px
+	.principles-item--5
+		.principles-item-text
+			margin-top 120px
+			margin-bottom 120px
+		
+
+@media (max-width 1080px)
+	.principles
+		padding-top 150px
+		.section-title
+			font-size 37px
 	.principles-container
 		flex-wrap wrap
 	.principles-item--1
@@ -144,6 +166,7 @@
 		left 0
 		top -16rem
 		right 10rem
+		display none
 
 	.principles-item--2:before
 	.principles-item--4:before

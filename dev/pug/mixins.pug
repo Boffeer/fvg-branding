@@ -6,7 +6,7 @@ mixin icon(name,mod)
 
 // services
 mixin bullet(img, text, section, bg, time)
-	li.services-item__bullet(data-aos="fade-up" data-aos-duration=time)
+	li.services-item__bullet(data-aos="fade-up" data-aos-duration=time   data-aos-offset="0")
 		img(src="static/img/content/4-services/"+img+".png", alt="text").services-item__bullet-icon
 		p.services-item__bullet-text= text
 		img.services-item__bullet-bg(src="static/img/content/4-services/"+section+"/bg/"+bg+".png", alt="bg")

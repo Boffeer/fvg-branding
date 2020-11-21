@@ -271,10 +271,14 @@
 .services--web .services-container
 	padding-top 224px
 	
+
+
+
+
 @media (min-width 1000px)
 	.services--support .services-item-info
 		padding-top 100px
-@media (max-width 880px)
+@media (max-width 1080px)
 	.services-item__bullet
 		padding-top 60px
 	.services-wrap:before
@@ -306,7 +310,7 @@
 	.services-item-info
 		width 100% !important
 	.services-item-bullets
-		justify-content center
+		justify-content space-around
 		margin-bottom 64px
 	.mobile-btn
 		display block
@@ -336,3 +340,115 @@
 		width: 190%;
 		left: -46%;
 		top: 14px;
+		
+
+	.services-item__bullet
+		min-width 45%
+		padding 52px 0
+		// min-width 100px
+	.services-item__bullet-text
+		font-size 14px
+		line-height 1.5
+		width 70%
+	.services-container
+		max-width 100% !important
+		width 100% !important
+	.services-item-info
+		padding-right 15px
+		padding-left 15px
+	
+
+
+
+
+
+@media (max-width 1000px) and (min-width: 500px)
+	.services-wrap:before
+		height 41px
+	.services--smm
+		.container 
+			padding-top 40px
+	.services--web:before
+	.services--seo:before
+		height 45px
+	.services--design:before
+		height 80px
+	.services--support:before
+		height 55px
+		bottom -42px
+		
+
+
+@media (max-width: 480px)
+	.services--smm .services-item__bullet:nth-child(1) .services-item__bullet-bg
+		width 170%
+		left -35%
+		top 8%
+	.services--smm .services-item__bullet:nth-child(2) .services-item__bullet-bg
+		width: 200%;
+		left: -49%;
+		top: 8%;
+	.services--smm .services-item__bullet:nth-child(5) .services-item__bullet-bg
+		width 175%
+		left -55px
+	.services--smm .services-item__bullet:nth-child(4) .services-item__bullet-bg
+	.services--smm .services-item__bullet:nth-child(6) .services-item__bullet-bg
+		width: 170%;
+		left -35%
+		
+	.services--smm .services-item__bullet:nth-child(7) .services-item__bullet-bg
+		transform scaleX(1.5)
+		top 14%
+		
+	.services--web .services-item__bullet:nth-child(5) .services-item__bullet-bg
+		width: 190%;
+		left: -43%;
+	    top: 5%;
+	.services--web .services-item__bullet:nth-child(6) .services-item__bullet-bg
+		width: 180%;
+		left: -40%;
+		top: 16%;
+		transform: scaleY(1.2)
+		
+	.services--design .services-item__bullet:nth-child(1) .services-item__bullet-bg
+	.services--design .services-item__bullet:nth-child(2) .services-item__bullet-bg
+		transform scaleY(1.1)
+		top 7%
+	.services--design .services-item__bullet:nth-child(5) .services-item__bullet-bg
+	.services--design .services-item__bullet:nth-child(4) .services-item__bullet-bg
+		transform: scaleY(0.9);
+		top -21%
+
+	.services--seo .services-item__bullet:nth-child(4)
+		order -1
+	.services--seo .services-item__bullet:nth-child(4) .services-item__bullet-bg
+		transform scaleY(1.1)
+		top 23%
+		
+
+	.services--world .services-item__bullet:nth-child(1) .services-item__bullet-bg
+		transform: scaleY(0.7);
+		top: -15%;
+	.services--world .services-item__bullet:nth-child(2) .services-item__bullet-bg
+		top: -14%;
+		transform: scaleY(0.7);
+	.services--world .services-item__bullet:nth-child(3) .services-item__bullet-bg
+		transform: scaleY(0.7);
+		top -13%
+	.services--world .services-item__bullet:nth-child(4) .services-item__bullet-bg
+		width: 200%;
+		left: -48%;
+		top: -27%;
+		transform: scaleY(0.7);
+	.services--world .services-item__bullet:nth-child(4) .services-item__bullet-text
+		width 80%
+	
+	.services--world .services-item__bullet:nth-child(5) .services-item__bullet-bg
+		top: -16%;
+		transform: scaleY(0.7);
+		
+	.services--world .services-item__bullet:nth-child(6) .services-item__bullet-bg
+		width: 190%;
+		left: -43%;
+		top: -21%;
+		transform: scaleY(0.7);

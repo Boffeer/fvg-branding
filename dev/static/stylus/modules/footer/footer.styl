@@ -18,6 +18,9 @@ footer
 	opacity 0.8
 	font-size 12px
 	line-height 1.4
+	
+.footer-logo_container:hover .footer-logo_descriptor
+	color clr-prim
 
 
 
@@ -54,12 +57,13 @@ footer
 
 .socials_item
 	margin-right 16px
+	max-height 80px
 .socials_item:last-child
 	margin-right 0
 
-.socials_item-icon:hover
-	fill c-prim
-	stroke c-prim
+.footer .hero-socials_icon:hover path
+	fill c-prim !important
+	stroke c-prim !important
 	trans()
 
 
@@ -69,8 +73,8 @@ footer
 	align-items flex-end
 
 .footer-socials-icons__item svg
-	width 32px
-	height 32px
+	width 42px
+	height 42px
 	align-self flex-end
 	
 
@@ -81,7 +85,7 @@ footer
 
 
 
-@media (max-width 480px)
+@media (max-width 1080px)
 	footer
 		flex-direction column
 		align-items center
