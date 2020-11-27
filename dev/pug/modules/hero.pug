@@ -7,7 +7,7 @@ section.hero#hero
 	.container
 		.hero-content
 			//- header.header
-			header.header(data-aos="fade-down" data-aos-duration="500")
+			header.header
 				.phone-numbers
 					a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
 					a.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
@@ -16,18 +16,13 @@ section.hero#hero
 				span
 				span
 				span
-			//- img(src="static/img/general/fvg-big-logo.svg" alt="fvg").hero-logo--aside
-			.offer(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
-				//- h1.headliner(data-aos="fade-left" data-aos-duration="500") Брендинговое агентство
+			.offer
 				h1.headliner Брендинговое агентство
 					span Fadeev-group
-				img(src="static/img/general/fvg-big-logo.svg" alt="fvg" data-aos="fade-left" data-aos-duration="500").hero-logo--mobile
+
 				p.descriptor Ваша узнаваемость и количество клиентов на нашей совести
 				button.btn.hero-btn.hero-cta Получить клиентов
-				//- p.descriptor(data-aos="fade-left" data-aos-duration="500") Ваша узнаваемость и количество клиентов на нашей совести
-				//- button.btn.hero-btn.hero-cta(data-aos="fade-left" data-aos-duration="500") Получить клиентов
 
-			//- .hero-socials(data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom")
 			.hero-socials
 				a(href="#{ig}")
 					+igIcon()
@@ -66,13 +61,13 @@ section.hero#hero
 		form.hero-callback.hero-modal
 			button(type="button").modal_close-btn ×
 			h3 Хотите мы вам перезвоним?
-			p.modal-text Чтобы мы могли связаться с вами
+			p.modal-text Оставьте имя и один удобный контакт для связи
 			input(name="formname" value='cta').g-form-name
 			input(
 				type="text"
 				name='name'
 				placeholder="Имя"
-				required).g-input
+				required).g-input.hero-modal_input--first
 			input(
 				type="text"
 				name='tel'
@@ -110,7 +105,7 @@ section.hero#hero
 				type="text"
 				name='name'
 				placeholder="Имя"
-				required).g-input
+				required).g-input.hero-modal_input--first
 			input(
 				type="text"
 				name='tel'
@@ -170,14 +165,14 @@ section.hero#hero
 							+igIcon()
 						a(href="#{vk}")
 							+vkIcon()
-						a(href="#{fb}")
-							+fbIcon()
 						a(href="#{tg}")
 							+tgIcon()
 						a(href="#{wa}")
 							+waIcon()
 						a(href="#{vi}")
 							+viberIcon()
+						a(href="#{fb}")
+							+fbIcon()
 					a.menu_item.hero-menu_email(href="#{email}") #{email}
 					a.menu_item.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
 					a.menu_item.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}

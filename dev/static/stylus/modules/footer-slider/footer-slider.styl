@@ -1,9 +1,17 @@
 .footer-bg{
-	padding-top 60px
+	// padding-top 60px
 	background #000
 	margin-top: 50px;
-	box-shadow: 0 -40px 60px  #000;
+	// box-shadow: 0 -40px 25px  #000;
 }
+.footer-bg:before
+	content ''
+	display block
+	width 100%
+	position relative
+	height 150px
+	background: linear-gradient(180deg, rgba(#000F40) 0%, rgba(0,0,0,1) 100%);
+
 .footer-bg .slick-dotted.slick-slider{margin-bottom: 0px;}
 
 .footer-title{
@@ -530,3 +538,5 @@
 	.slide-inner{
 		margin-bottom: 0;
 	}
+	.footer-bg .section-title
+		font-size 35px

@@ -1,11 +1,11 @@
 section.form2-wrap#footer-form
 	.container
 		.form2(data-aos="fade-up")
-			h2.form-title Чем дольше вы думаете, тем больше денег зарабатывают ваши конкуренты
+			h2.form-title.form2-title Чем дольше вы думаете, тем больше денег зарабатывают ваши конкуренты
 			.form2-contacts
 				.form2-call
 					p.form2-cta Позвоните нам
-					.phone-numbers
+					.phone-numbers.form2-numbers
 						a.phone-belarus(href="#{byPhoneLnk}") #{byPhone}
 						a.phone-russia(href="#{ruPhoneLnk}") #{ruPhone}
 				form
@@ -17,8 +17,8 @@ section.form2-wrap#footer-form
 						required)
 					input.btn(
 						type="submit"
-						value="Отправить").btn
-					p.gdpr-caption Нажимая кнопку «Отправить», я даю согласие на передачу персональных данных согласно
+						value="Заказать звонок").btn.form2_btn
+					p.gdpr-caption Нажимая кнопку «Заказать звонок», я даю согласие на передачу персональных данных согласно
 						a(href="#{policy}")  политике конфиденциальности.
 
-	img(src="static/img/content/11-form-2/time.png", alt="")
+	img.form2-img(src="static/img/content/11-form-2/time.png", alt="")

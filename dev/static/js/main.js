@@ -56,99 +56,99 @@ window.addEventListener('scroll', function() {
   }
 });
 
-(function($){
+// (function($){
 
- $.event.special.wheelup = $.event.special.wheeldown = $.event.special.wheelleft = $.event.special.wheelright = {
-    setup: function(){
-        if(waka.touchable)return false;
-        // Gecko, WebKit
-        if(this.addEventListener) 
-            this.addEventListener('DOMMouseScroll', handler, false);
-        // IE, Presto
-            this.onmousewheel = handler;
-    },    
-    teardown: function(){
-        if(waka.touchable)return false;
-        // Gecko, WebKit
-        if(this.removeEventListener) 
-            this.removeEventListener('DOMMouseScroll', handler, false);
-        // IE, Presto
-            this.onmousewheel = null;
-    }
- };
+//  $.event.special.wheelup = $.event.special.wheeldown = $.event.special.wheelleft = $.event.special.wheelright = {
+//     setup: function(){
+//         if(waka.touchable)return false;
+//         // Gecko, WebKit
+//         if(this.addEventListener) 
+//             this.addEventListener('DOMMouseScroll', handler, false);
+//         // IE, Presto
+//             this.onmousewheel = handler;
+//     },    
+//     teardown: function(){
+//         if(waka.touchable)return false;
+//         // Gecko, WebKit
+//         if(this.removeEventListener) 
+//             this.removeEventListener('DOMMouseScroll', handler, false);
+//         // IE, Presto
+//             this.onmousewheel = null;
+//     }
+//  };
 
- $.fn.extend({
-    wheelup: function(f){
-        return f ? this.bind('wheelup',f) : this.trigger('wheelup');
-    },    
-    unwheelup: function(f){
-        return this.unbind('wheelup',f);
-    },
-    wheeldown: function(f){
-        return f ? this.bind('wheeldown',f) : this.trigger('wheeldown');
-    },    
-    unwheeldown: function(f){
-        return this.unbind('wheeldown',f);
-    },
-    wheelleft: function(f){
-        return f ? this.bind('wheelleft',f) : this.trigger('wheelleft');
-    },    
-    unwheelleft: function(f){
-        return this.unbind('wheelleft',f);
-    },
-    wheelright: function(f){
-        return f ? this.bind('wheelright',f) : this.trigger('wheelright');
-    },    
-    unwheelright: function(f){
-        return this.unbind('wheelright',f);
-    }
- });
+//  $.fn.extend({
+//     wheelup: function(f){
+//         return f ? this.bind('wheelup',f) : this.trigger('wheelup');
+//     },    
+//     unwheelup: function(f){
+//         return this.unbind('wheelup',f);
+//     },
+//     wheeldown: function(f){
+//         return f ? this.bind('wheeldown',f) : this.trigger('wheeldown');
+//     },    
+//     unwheeldown: function(f){
+//         return this.unbind('wheeldown',f);
+//     },
+//     wheelleft: function(f){
+//         return f ? this.bind('wheelleft',f) : this.trigger('wheelleft');
+//     },    
+//     unwheelleft: function(f){
+//         return this.unbind('wheelleft',f);
+//     },
+//     wheelright: function(f){
+//         return f ? this.bind('wheelright',f) : this.trigger('wheelright');
+//     },    
+//     unwheelright: function(f){
+//         return this.unbind('wheelright',f);
+//     }
+//  });
 
- function handler(ev){
-    var e = ev, 
-        args = [].slice.call( arguments, 1 ), 
-        delta = 0, deltaX = 0, deltaY = 0;
+//  function handler(ev){
+//     var e = ev, 
+//         args = [].slice.call( arguments, 1 ), 
+//         delta = 0, deltaX = 0, deltaY = 0;
 
-    ev = $.event.fix(e);
+//     ev = $.event.fix(e);
 
-    // Old school scrollwheel delta
-    if(e.wheelDelta)delta = e.wheelDelta/120;
-    if(e.detail)delta = -e.detail/3;
+//     // Old school scrollwheel delta
+//     if(e.wheelDelta)delta = e.wheelDelta/120;
+//     if(e.detail)delta = -e.detail/3;
 
-    // New school multidimensional scroll (touchpads) deltas
-    deltaY = delta;
+//     // New school multidimensional scroll (touchpads) deltas
+//     deltaY = delta;
 
-    // Gecko
-    if(e.axis !== undefined && e.axis === e.HORIZONTAL_AXIS){
-        deltaX = -1*delta;
-    }
+//     // Gecko
+//     if(e.axis !== undefined && e.axis === e.HORIZONTAL_AXIS){
+//         deltaX = -1*delta;
+//     }
 
-    // Webkit
-    if(e.wheelDeltaY !== undefined )deltaY = e.wheelDeltaY/120; 
-    if(e.wheelDeltaX !== undefined )deltaX = -1*e.wheelDeltaX/120;
+//     // Webkit
+//     if(e.wheelDeltaY !== undefined )deltaY = e.wheelDeltaY/120; 
+//     if(e.wheelDeltaX !== undefined )deltaX = -1*e.wheelDeltaX/120;
 
-    if(deltaY > 0)ev.type = 'wheelup';
-    if(deltaY < 0)ev.type = 'wheeldown';
-    if(deltaX > 0)ev.type = 'wheelright';
-    if(deltaX < 0)ev.type = 'wheelleft';
+//     if(deltaY > 0)ev.type = 'wheelup';
+//     if(deltaY < 0)ev.type = 'wheeldown';
+//     if(deltaX > 0)ev.type = 'wheelright';
+//     if(deltaX < 0)ev.type = 'wheelleft';
 
-    // Add event and delta to the front of the arguments
-    args.unshift(ev, delta, deltaX, deltaY);
+//     // Add event and delta to the front of the arguments
+//     args.unshift(ev, delta, deltaX, deltaY);
 
-    $(".work-slider").addEventListener('wheelright', function(){
-        item.preventDefault();
-        $(".work-slider").slick("slickNext");
-      });
-    $(".work-slider").addEventListener('wheelleft', function(){
-        item.preventDefault();
-        $(".work-slider").slick("slickPrev");
-      });
+//     $(".work-slider").addEventListener('wheelright', function(){
+//         item.preventDefault();
+//         $(".work-slider").slick("slickNext");
+//       });
+//     $(".work-slider").addEventListener('wheelleft', function(){
+//         item.preventDefault();
+//         $(".work-slider").slick("slickPrev");
+//       });
     
-    return ($.event.dispatch || $.event.handle).apply(this, args);
- }
+//     return ($.event.dispatch || $.event.handle).apply(this, args);
+//  }
 
 
-})(jQuery);
+// })(jQuery);
 
 
 
@@ -298,7 +298,8 @@ let slidersList = [".cases-slider", ".work-slider", "footer-slider"];
 
 
   $('.menu-burger_close').click(function(){
-    $('.menu_wrap').slideToggle()
+    // $('.menu_wrap').slideToggle()
+    $('.menu_wrap').fadeToggle()
     $('html').removeClass('modal-open');
   })
 
@@ -313,12 +314,14 @@ let slidersList = [".cases-slider", ".work-slider", "footer-slider"];
 
 
   $('.burger').click(function(){
-    $('.menu_wrap').slideToggle()
+    // $('.menu_wrap').slideToggle()
+    $('.menu_wrap').fadeToggle()
     $('html').addClass('modal-open');
     
+
     let j = 1.5;
     for (let i = 0; i < 5; i++){
-      i == 4 ? j = 1.3 : j = 1.5
+      i == 4 ? j = 1.4 : j = 1.5
       setTimeout(function(){
         $('.menu_nav .menu_nav-item:nth-child('+i+')').addClass('js-menu_nav-item--opened');
       }, (350 * i));
